@@ -1,0 +1,294 @@
+/* Tailwind CSS base styles */
+@import url('https://cdn.tailwindcss.com');
+
+/* Custom CSS Variables and Styles */
+:root {
+  /* Base colors */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  
+  /* Primary - Nordic forest green */
+  --primary: 152 30% 25%;
+  --primary-foreground: 0 0% 98%;
+  
+  /* Secondary - Warm wood tone */
+  --secondary: 28 25% 88%;
+  --secondary-foreground: 0 0% 9%;
+  
+  /* Muted - Subtle gray */
+  --muted: 210 20% 95%;
+  --muted-foreground: 215 16% 47%;
+  
+  /* Accent - Warm copper */
+  --accent: 15 35% 65%;
+  --accent-foreground: 0 0% 9%;
+  
+  /* Destructive */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  /* Border colors */
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 152 30% 25%;
+  
+  /* Nordic sauna theme colors */
+  --wood-light: 28 40% 85%;
+  --wood-medium: 28 35% 70%;
+  --wood-deep: 25 30% 35%;
+  --nordic-frost: 200 25% 95%;
+  --sauna-heat: 15 50% 75%;
+  
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, hsl(152 30% 25% / 0.9), hsl(25 30% 35% / 0.8));
+  --gradient-soft: linear-gradient(180deg, hsl(210 20% 98%), hsl(210 20% 95%));
+  
+  /* Shadows */
+  --shadow-soft: 0 2px 10px -2px hsl(152 30% 25% / 0.1);
+  --shadow-warm: 0 8px 25px -8px hsl(15 35% 65% / 0.3);
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 152 30% 40%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 28 25% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 15 35% 55%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --ring: 152 30% 40%;
+  
+  --wood-light: 28 30% 25%;
+  --wood-medium: 28 25% 35%;
+  --wood-deep: 25 30% 70%;
+  --nordic-frost: 200 25% 15%;
+  --sauna-heat: 15 40% 45%;
+  
+  --gradient-hero: linear-gradient(135deg, hsl(152 30% 15% / 0.9), hsl(25 30% 20% / 0.8));
+  --gradient-soft: linear-gradient(180deg, hsl(217 32% 8%), hsl(217 32% 12%));
+  
+  --shadow-soft: 0 2px 10px -2px hsl(0 0% 0% / 0.3);
+  --shadow-warm: 0 8px 25px -8px hsl(15 35% 35% / 0.4);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom utility classes */
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-soft {
+  background: var(--gradient-soft);
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-warm {
+  box-shadow: var(--shadow-warm);
+}
+
+.text-primary {
+  color: hsl(var(--primary));
+}
+
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
+.text-wood-deep {
+  color: hsl(var(--wood-deep));
+}
+
+.text-accent {
+  color: hsl(var(--accent));
+}
+
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+
+.bg-background {
+  background-color: hsl(var(--background));
+}
+
+.border-border {
+  border-color: hsl(var(--border));
+}
+
+/* Toast styles */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast {
+  background: white;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 8px;
+  box-shadow: var(--shadow-soft);
+  max-width: 350px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.toast-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: hsl(var(--foreground));
+}
+
+.toast-description {
+  color: hsl(var(--muted-foreground));
+  font-size: 14px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.btn-outline:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.btn-lg {
+  padding: 12px 32px;
+  font-size: 18px;
+}
+
+/* Card styles */
+.card {
+  background-color: hsl(var(--card));
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-soft);
+}
+
+.card-header {
+  padding: 24px 24px 0;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: hsl(var(--card-foreground));
+  margin: 0 0 8px 0;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .md\:text-7xl {
+    font-size: 3rem;
+  }
+  
+  .md\:text-5xl {
+    font-size: 2.25rem;
+  }
+  
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) {
+  .md\:text-7xl {
+    font-size: 4.5rem;
+  }
+  
+  .md\:text-5xl {
+    font-size: 3rem;
+  }
+  
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
