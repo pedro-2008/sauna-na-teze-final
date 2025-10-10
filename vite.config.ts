@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/sauna-na-teze-web-14307/',
+  base: mode === 'production' ? '/sauna-na-teze-web-14307/' : '/',
   server: {
     host: "::",
     port: 8080,
