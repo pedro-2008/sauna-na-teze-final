@@ -1,6 +1,5 @@
 export const About = () => {
-  return (
-    <section id="about" className="py-24 px-6 bg-gradient-hero">
+  return <section id="about" className="py-24 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
@@ -12,14 +11,10 @@ export const About = () => {
               Naše sauna je postavena podle tradičních finských postupů 
               s použitím kvalitního severského dřeva.
             </p>
-            <p className="text-lg mb-8 text-muted-foreground leading-relaxed">
-              Věříme v sílu saunování jako cesty k fyzické i mentální pohodě. 
-              V naší sauna najdete klid, regeneraci a prostor pro odpočinek 
-              od každodenního stresu.
-            </p>
+            <p className="text-lg mb-8 text-muted-foreground leading-relaxed">Věříme v sílu saunování jako cesty k fyzické i mentální pohodě. V naší sauně najdete klid, regeneraci a prostor pro odpočinek od každodenního stresu.</p>
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <h3 className="text-2xl font-medium mb-2 text-wood-deep">85°C</h3>
+                <h3 className="text-2xl font-medium mb-2 text-wood-deep">90°C</h3>
                 <p className="text-muted-foreground">Optimální teplota</p>
               </div>
               <div>
@@ -54,6 +49,5 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
