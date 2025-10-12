@@ -11,11 +11,11 @@ export const Services = () => {
   }, {
     title: "Baňkování",
     description: "Tradiční čínská metoda léčby pomocí podtlakových baněk pro zlepšení krevního oběhu.",
-    features: ["Detoxikace organismu", "Zlepšení krevního oběhu", "30 minut"]
+    features: ["Detoxikace organismu", "Zlepšení krevního oběhu", "30-40 minut"]
   }, {
     title: "Antistresová masáž hlavy",
     description: "Speciální masáž hlavy a krční páteře pro uvolnění napětí a migrény.",
-    features: ["Uvolnění krčních svalů", "Proti migréně", "30 minut"]
+    features: ["Uvolnění krčních svalů", "Proti migréně", "30-40 minut"]
   }, {
     title: "Masáž lávovými kameny",
     description: "Luxusní masáž s využitím horkých vulkanických kamenů pro hlubokou relaxaci.",
