@@ -7,7 +7,7 @@ export const Services = () => {
   }, {
     title: "Relaxační masáž",
     description: "Jemná celotělová masáž pro úplné uvolnění a odstranění stresu.",
-    features: ["Celotělová masáž", "Aromatické oleje", "60-90 minut"]
+    features: ["Celotělová masáž", "Aromatické oleje", "90 minut"]
   }, {
     title: "Baňkování",
     description: "Tradiční čínská metoda léčby pomocí podtlakových baněk pro zlepšení krevního oběhu.",
