@@ -46,7 +46,7 @@ export const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">Naše služby</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Komplexní wellness a masážní služby pro vaše zdraví a pohodu
+            Finská sauna, vířivé vany a masážní služby pro vaše zdraví a pohodu
           </p>
         </div>
         
