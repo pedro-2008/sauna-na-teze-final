@@ -73,16 +73,15 @@ export const Contact = () => {
                 <p className="text-muted-foreground mb-1">Email</p>
                 <p className="text-primary font-medium">janasportmasaz@seznam.cz</p>
               </div>
-              <div>
-                <p className="text-muted-foreground mb-1">Facebook</p>
+              <div className="pt-4">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61582524922922" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors"
+                  className="flex items-center justify-center gap-3 w-full py-4 px-6 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  <Facebook className="w-5 h-5" />
-                  <span>Navštivte naši stránku</span>
+                  <Facebook className="w-6 h-6" />
+                  <span className="font-semibold text-lg">Navštivte nás na Facebooku</span>
                 </a>
               </div>
               <div className="pt-4">
