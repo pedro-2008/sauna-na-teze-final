@@ -41,7 +41,8 @@ export const Services = () => {
     description: "Relaxace ve vířivých vanách s hydromasážními tryskami pro úplné uvolnění.",
     features: ["Hydromasážní trysky", "Regulace teploty", "10-20 minut"]
   }];
-  return <section className="py-24 px-6 bg-background">
+  return (
+    <section className="py-24 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">Naše služby</h2>
@@ -51,7 +52,8 @@ export const Services = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => <Card key={index} className="border-0 shadow-soft hover:shadow-warm transition-shadow duration-300">
+          {services.map((service, index) => (
+            <Card key={index} className="border-0 shadow-soft hover:shadow-warm transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-xl text-wood-deep">{service.title}</CardTitle>
                 <div className="text-2xl font-light text-accent mt-2">{service.price}</div>
@@ -61,14 +63,18 @@ export const Services = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent mr-3" />
                       {feature}
-                    </li>)}
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
-            </Card>)}
+            </Card>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
