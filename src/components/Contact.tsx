@@ -84,13 +84,6 @@ export const Contact = () => {
                   <span className="font-semibold text-lg">Navštivte nás na Facebooku</span>
                 </a>
               </div>
-              <div className="pt-4">
-                <Button className="w-full" size="lg" onClick={() => {
-                window.open('tel:+420123456789', '_self');
-              }}>
-                  Rezervovat nyní
-                </Button>
-              </div>
             </CardContent>
           </Card>
         </div>
