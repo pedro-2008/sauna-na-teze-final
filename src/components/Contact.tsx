@@ -15,7 +15,7 @@ export const Contact = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">
-          <Card className="border-0 shadow-soft">
+          <Card className="border-0 shadow-soft animate-slide-in-left hover:shadow-warm transition-shadow duration-300">
             <CardHeader>
               <CardTitle className="text-xl text-wood-deep">Otevírací doba – říjen 2025</CardTitle>
             </CardHeader>
@@ -56,7 +56,7 @@ export const Contact = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-soft">
+          <Card className="border-0 shadow-soft animate-slide-in-right hover:shadow-warm transition-shadow duration-300">
             <CardHeader>
               <CardTitle className="text-xl text-wood-deep">Kde nás najdete</CardTitle>
             </CardHeader>

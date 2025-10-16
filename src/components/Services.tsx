@@ -53,7 +53,7 @@ export const Services = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="border-0 shadow-soft hover:shadow-warm transition-shadow duration-300">
+            <Card key={index} className="border-0 shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-fade-in" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'backwards' }}>
               <CardHeader>
                 <CardTitle className="text-xl text-wood-deep">{service.title}</CardTitle>
                 <div className="text-2xl font-light text-accent mt-2">{service.price}</div>

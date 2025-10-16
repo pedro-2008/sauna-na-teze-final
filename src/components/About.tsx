@@ -2,7 +2,7 @@ export const About = () => {
   return <section id="about" className="py-24 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div>
+          <div className="animate-slide-in-left">
             <h2 className="text-4xl md:text-5xl font-light mb-8 text-primary">
               Finská tradice
             </h2>
@@ -24,7 +24,7 @@ export const About = () => {
             </div>
           </div>
           
-          <div className="bg-white rounded-lg p-8 shadow-soft">
+          <div className="bg-white rounded-lg p-8 shadow-soft animate-slide-in-right hover:shadow-warm transition-shadow duration-300">
             <h3 className="text-2xl font-medium mb-6 text-primary">
               Proč finská sauna?
             </h3>
