@@ -1,45 +1,55 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dumbbell, Sparkles, CircleDot, Brain, Flame, Bed, Bandage, Waves } from "lucide-react";
+
 export const Services = () => {
   const services = [{
     title: "Sportovní masáž",
     price: "400 - 800 Kč",
     description: "Specializovaná masáž pro sportovce zaměřená na regeneraci svalů a prevenci zranění.",
-    features: ["Hluboké svalové techniky", "Individuální přístup", "30-60 minut"]
+    features: ["Hluboké svalové techniky", "Individuální přístup", "30-60 minut"],
+    icon: Dumbbell
   }, {
     title: "Relaxační masáž",
     price: "1200 Kč",
     description: "Jemná celotělová masáž pro úplné uvolnění a odstranění stresu.",
-    features: ["Celotělová masáž", "Aromatické oleje", "90 minut"]
+    features: ["Celotělová masáž", "Aromatické oleje", "90 minut"],
+    icon: Sparkles
   }, {
     title: "Baňkování",
     price: "450 - 500 Kč",
     description: "Tradiční čínská metoda léčby pomocí podtlakových baněk pro zlepšení krevního oběhu.",
-    features: ["Detoxikace organismu", "Zlepšení krevního oběhu", "30-40 minut"]
+    features: ["Detoxikace organismu", "Zlepšení krevního oběhu", "30-40 minut"],
+    icon: CircleDot
   }, {
     title: "Antistresová masáž hlavy",
     price: "450 Kč",
     description: "Speciální masáž hlavy a krční páteře pro uvolnění napětí a migrény.",
-    features: ["Uvolnění krčních svalů", "Proti migréně", "30-40 minut"]
+    features: ["Uvolnění krčních svalů", "Proti migréně", "30-40 minut"],
+    icon: Brain
   }, {
     title: "Masáž lávovými kameny",
     price: "950 Kč",
     description: "Luxusní masáž s využitím horkých vulkanických kamenů pro hlubokou relaxaci.",
-    features: ["Horké lávové kameny", "Hluboká relaxace", "60 minut"]
+    features: ["Horké lávové kameny", "Hluboká relaxace", "60 minut"],
+    icon: Flame
   }, {
     title: "Autotrakční lehátko",
     price: "100 - 200 Kč",
     description: "Moderní terapeutické zařízení pro protažení páteře a uvolnění zablokovaných kloubů.",
-    features: ["Trakce páteře", "Terapeutické protažení", "10-20 minut"]
+    features: ["Trakce páteře", "Terapeutické protažení", "10-20 minut"],
+    icon: Bed
   }, {
     title: "Kineziotejping",
     price: "Dle rozsahu",
     description: "Aplikace speciálních pásek pro podporu svalů a kloubů při rehabilitaci.",
-    features: ["Podpora svalů", "Rehabilitace", "Individuální aplikace"]
+    features: ["Podpora svalů", "Rehabilitace", "Individuální aplikace"],
+    icon: Bandage
   }, {
     title: "Vířivé vany",
     price: "30 min 250 Kč / 60 min 500 Kč",
     description: "Relaxace ve vířivých vanách s hydromasážními tryskami pro úplné uvolnění.",
-    features: ["Hydromasážní trysky", "Regulace teploty", "10-20 minut"]
+    features: ["Hydromasážní trysky", "Regulace teploty", "10-20 minut"],
+    icon: Waves
   }];
   return (
     <section className="py-24 px-6 bg-background">
@@ -52,12 +62,19 @@ export const Services = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="border-0 shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-fade-in" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'backwards' }}>
-              <CardHeader>
-                <CardTitle className="text-xl text-wood-deep">{service.title}</CardTitle>
-                <div className="text-2xl font-light text-accent mt-2">{service.price}</div>
-              </CardHeader>
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <Card key={index} className="border-0 shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'backwards' }}>
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                      <Icon className="w-6 h-6 text-accent group-hover:animate-spin-slow" />
+                    </div>
+                    <CardTitle className="text-xl text-wood-deep">{service.title}</CardTitle>
+                  </div>
+                  <div className="text-2xl font-light text-accent mt-2">{service.price}</div>
+                </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
@@ -72,7 +89,8 @@ export const Services = () => {
                 </ul>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
