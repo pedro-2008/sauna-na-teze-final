@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Facebook } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/components/ui/use-toast";
 export const Contact = () => {
@@ -71,6 +72,18 @@ export const Contact = () => {
               <div>
                 <p className="text-muted-foreground mb-1">Email</p>
                 <p className="text-primary font-medium">janasportmasaz@seznam.cz</p>
+              </div>
+              <div>
+                <p className="text-muted-foreground mb-1">Facebook</p>
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61582524922922" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors"
+                >
+                  <Facebook className="w-5 h-5" />
+                  <span>Navštivte naši stránku</span>
+                </a>
               </div>
               <div className="pt-4">
                 <Button className="w-full" size="lg" onClick={() => {
