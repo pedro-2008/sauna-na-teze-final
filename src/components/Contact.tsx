@@ -2,8 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Facebook } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/components/ui/use-toast";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 export const Contact = () => {
-  return <section className="py-24 px-6 bg-gradient-hero">
+  const { ref, isVisible } = useScrollAnimation();
+  
+  return <section ref={ref} className="py-24 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">
@@ -15,7 +19,9 @@ export const Contact = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">
-          <Card className="border-0 shadow-soft animate-slide-in-left hover:shadow-warm transition-shadow duration-300">
+          <Card className={`border-0 shadow-soft hover:shadow-warm transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'
+          }`}>
             <CardHeader>
               <CardTitle className="text-xl text-wood-deep">Otevírací doba – říjen 2025</CardTitle>
             </CardHeader>
@@ -56,7 +62,11 @@ export const Contact = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-0 shadow-soft animate-slide-in-right hover:shadow-warm transition-shadow duration-300">
+          <Card className={`border-0 shadow-soft hover:shadow-warm transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'
+          }`}
+          style={{ transitionDelay: '200ms' }}
+          >
             <CardHeader>
               <CardTitle className="text-xl text-wood-deep">Kde nás najdete</CardTitle>
             </CardHeader>

@@ -1,7 +1,13 @@
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 export const Pricing = () => {
-  return <section className="py-24 px-6 bg-gradient-hero">
+  const { ref, isVisible } = useScrollAnimation();
+  
+  return <section ref={ref} className="py-24 px-6 bg-gradient-hero">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center bg-white rounded-lg p-8 shadow-soft animate-scale-in hover:shadow-warm transition-shadow duration-300">
+        <div className={`text-center bg-white rounded-lg p-8 shadow-soft hover:shadow-warm transition-all duration-1000 ${
+          isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+        }`}>
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">Ceník</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             <div>

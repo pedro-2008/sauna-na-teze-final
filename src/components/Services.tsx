@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dumbbell, Sparkles, CircleDot, Brain, Flame, Bed, Bandage, Waves } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const Services = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const services = [{
     title: "Sportovní masáž",
     price: "400 - 800 Kč",
@@ -52,7 +54,7 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section className="py-24 px-6 bg-background">
+    <section ref={ref} className="py-24 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">Naše služby</h2>
@@ -65,7 +67,15 @@ export const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="border-0 shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-1 animate-fade-in group" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'backwards' }}>
+              <Card 
+                key={index} 
+                className={`border-0 shadow-soft hover:shadow-warm transition-all duration-700 hover:scale-105 hover:-translate-y-1 group ${
+                  isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
+                }`}
+                style={{ 
+                  transitionDelay: `${index * 100}ms`
+                }}
+              >
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
                     <div className="p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
