@@ -115,5 +115,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      linear-gradient(to bottom, hsl(var(--background) / 0.95), hsl(var(--background) / 0.95)),
+      url('/src/assets/wood-texture.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
 }
