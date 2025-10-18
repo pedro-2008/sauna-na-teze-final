@@ -6,9 +6,9 @@ export const About = () => {
   return <section id="about" ref={ref} className="py-24 px-6 bg-gradient-hero relative overflow-hidden">
       {/* Steam effect */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute bottom-0 left-1/4 w-48 h-96 bg-white/20 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '0s' }} />
-        <div className="absolute bottom-0 left-1/2 w-40 h-80 bg-white/15 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-0 right-1/3 w-44 h-88 bg-white/18 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-0 left-1/4 w-48 h-96 bg-stone-grey/30 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '0s' }} />
+        <div className="absolute bottom-0 left-1/2 w-40 h-80 bg-stone-grey/25 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-0 right-1/3 w-44 h-88 bg-stone-grey/28 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '4s' }} />
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
