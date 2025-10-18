@@ -186,13 +186,13 @@ export default {
 				'steam-rise': {
 					'0%': {
 						transform: 'translateY(0) scale(1)',
-						opacity: '0.05'
+						opacity: '0.3'
 					},
 					'50%': {
-						opacity: '0.08'
+						opacity: '0.5'
 					},
 					'100%': {
-						transform: 'translateY(-100vh) scale(1.5)',
+						transform: 'translateY(-100vh) scale(1.8)',
 						opacity: '0'
 					}
 				}
