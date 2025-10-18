@@ -182,6 +182,19 @@ export default {
 					'100%': {
 						transform: 'rotate(360deg)'
 					}
+				},
+				'steam-rise': {
+					'0%': {
+						transform: 'translateY(0) scale(1)',
+						opacity: '0.05'
+					},
+					'50%': {
+						opacity: '0.08'
+					},
+					'100%': {
+						transform: 'translateY(-100vh) scale(1.5)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
@@ -194,7 +207,8 @@ export default {
 				'scale-in': 'scale-in 0.5s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-				'spin-slow': 'spin-slow 8s linear infinite'
+				'spin-slow': 'spin-slow 8s linear infinite',
+				'steam-rise': 'steam-rise 12s ease-in infinite'
 			}
 		}
 	},

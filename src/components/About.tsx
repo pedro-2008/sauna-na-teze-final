@@ -3,8 +3,15 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section id="about" ref={ref} className="py-24 px-6 bg-gradient-hero">
-      <div className="max-w-6xl mx-auto">
+  return <section id="about" ref={ref} className="py-24 px-6 bg-gradient-hero relative overflow-hidden">
+      {/* Steam effect */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-1/4 w-32 h-64 bg-white/5 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '0s' }} />
+        <div className="absolute bottom-0 left-1/2 w-24 h-56 bg-white/4 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-0 right-1/3 w-28 h-60 bg-white/3 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '4s' }} />
+      </div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'
