@@ -4,11 +4,12 @@ export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return <section id="about" ref={ref} className="py-24 px-6 bg-gradient-hero relative overflow-hidden">
-      {/* Steam effect */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute bottom-0 left-1/4 w-48 h-96 bg-stone-grey/30 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '0s' }} />
-        <div className="absolute bottom-0 left-1/2 w-40 h-80 bg-stone-grey/25 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-0 right-1/3 w-44 h-88 bg-stone-grey/28 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '4s' }} />
+      {/* Steam effect - visible rising steam */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-[15%] w-32 h-64 bg-gray-400/40 rounded-full blur-2xl animate-steam-rise" />
+        <div className="absolute bottom-0 left-[45%] w-28 h-56 bg-gray-400/35 rounded-full blur-2xl animate-steam-rise" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-0 left-[75%] w-36 h-72 bg-gray-400/45 rounded-full blur-2xl animate-steam-rise" style={{ animationDelay: '6s' }} />
+        <div className="absolute bottom-0 left-[60%] w-24 h-48 bg-gray-400/30 rounded-full blur-2xl animate-steam-rise" style={{ animationDelay: '9s' }} />
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">

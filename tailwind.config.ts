@@ -185,14 +185,11 @@ export default {
 				},
 				'steam-rise': {
 					'0%': {
-						transform: 'translateY(0) scale(1)',
-						opacity: '0.3'
-					},
-					'50%': {
-						opacity: '0.5'
+						transform: 'translateY(0) scale(0.8)',
+						opacity: '0.6'
 					},
 					'100%': {
-						transform: 'translateY(-100vh) scale(1.8)',
+						transform: 'translateY(-120vh) scale(1.3)',
 						opacity: '0'
 					}
 				}
@@ -208,7 +205,7 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'spin-slow': 'spin-slow 8s linear infinite',
-				'steam-rise': 'steam-rise 12s ease-in infinite'
+				'steam-rise': 'steam-rise 15s ease-out infinite'
 			}
 		}
 	},
