@@ -137,7 +137,7 @@ All colors MUST be HSL.
     background-image: url('/wood-texture.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.08;
+    opacity: 0.25;
     pointer-events: none;
     z-index: 0;
   }
