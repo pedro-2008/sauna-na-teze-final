@@ -3,7 +3,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section id="about" ref={ref} className="py-24 px-6 bg-gradient-hero relative overflow-hidden">
+  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden">
       {/* Steam effect - visible rising steam */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-[15%] w-32 h-64 bg-gray-400/40 rounded-full blur-2xl animate-steam-rise" />
@@ -38,7 +38,7 @@ export const About = () => {
             </div>
           </div>
           
-          <div className={`bg-white rounded-lg p-8 shadow-soft hover:shadow-warm transition-all duration-1000 ${
+          <div className={`bg-white/60 backdrop-blur-sm rounded-lg p-8 shadow-soft hover:shadow-warm transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'
           }`}
           style={{ transitionDelay: '200ms' }}

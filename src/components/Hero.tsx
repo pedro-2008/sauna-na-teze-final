@@ -7,7 +7,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: `url(${heroImage})`
     }}>
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(243, 238, 230, 0.15)' }} />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
       
       {/* Content */}
