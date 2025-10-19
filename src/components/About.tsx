@@ -6,10 +6,11 @@ export const About = () => {
   return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden">
       {/* Steam effect - visible rising steam */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-[15%] w-32 h-64 bg-gray-400/40 rounded-full blur-2xl animate-steam-rise" />
-        <div className="absolute bottom-0 left-[45%] w-28 h-56 bg-gray-400/35 rounded-full blur-2xl animate-steam-rise" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-0 left-[75%] w-36 h-72 bg-gray-400/45 rounded-full blur-2xl animate-steam-rise" style={{ animationDelay: '6s' }} />
-        <div className="absolute bottom-0 left-[60%] w-24 h-48 bg-gray-400/30 rounded-full blur-2xl animate-steam-rise" style={{ animationDelay: '9s' }} />
+        <div className="absolute bottom-0 left-[15%] w-48 h-96 bg-white/70 rounded-full blur-3xl animate-steam-rise" />
+        <div className="absolute bottom-0 left-[45%] w-40 h-80 bg-white/65 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-0 left-[75%] w-52 h-[28rem] bg-white/75 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '6s' }} />
+        <div className="absolute bottom-0 left-[60%] w-36 h-72 bg-white/60 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '9s' }} />
+        <div className="absolute bottom-0 left-[30%] w-44 h-88 bg-white/55 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '4.5s' }} />
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
