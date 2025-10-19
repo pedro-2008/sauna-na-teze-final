@@ -5,12 +5,12 @@ export const About = () => {
   
   return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden">
       {/* Steam effect - visible rising steam */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-[15%] w-48 h-96 bg-white/70 rounded-full blur-3xl animate-steam-rise" />
-        <div className="absolute bottom-0 left-[45%] w-40 h-80 bg-white/65 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-0 left-[75%] w-52 h-[28rem] bg-white/75 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '6s' }} />
-        <div className="absolute bottom-0 left-[60%] w-36 h-72 bg-white/60 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '9s' }} />
-        <div className="absolute bottom-0 left-[30%] w-44 h-88 bg-white/55 rounded-full blur-3xl animate-steam-rise" style={{ animationDelay: '4.5s' }} />
+      <div className="absolute inset-0 pointer-events-none z-[1]">
+        <div className="absolute bottom-0 left-[15%] w-48 h-96 bg-white/80 rounded-full blur-3xl" style={{ animation: 'steam-rise 15s ease-in-out infinite' }} />
+        <div className="absolute bottom-0 left-[45%] w-40 h-80 bg-white/75 rounded-full blur-3xl" style={{ animation: 'steam-rise 18s ease-in-out infinite', animationDelay: '3s' }} />
+        <div className="absolute bottom-0 left-[75%] w-52 h-[28rem] bg-white/85 rounded-full blur-3xl" style={{ animation: 'steam-rise 20s ease-in-out infinite', animationDelay: '6s' }} />
+        <div className="absolute bottom-0 left-[60%] w-36 h-72 bg-white/70 rounded-full blur-3xl" style={{ animation: 'steam-rise 16s ease-in-out infinite', animationDelay: '9s' }} />
+        <div className="absolute bottom-0 left-[30%] w-44 h-88 bg-white/65 rounded-full blur-3xl" style={{ animation: 'steam-rise 17s ease-in-out infinite', animationDelay: '4.5s' }} />
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
