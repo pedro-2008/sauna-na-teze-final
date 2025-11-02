@@ -25,34 +25,35 @@ export const Contact = () => {
             <CardHeader>
               <CardTitle className="text-xl text-wood-deep">Otevírací doba – listopad 2025</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex justify-between">
+            <CardContent>
+              <div className="grid grid-cols-[1fr,auto,auto] gap-y-4 gap-x-6 items-center">
                 <span className="text-muted-foreground">Pondělí</span>
                 <span className="text-primary font-medium">Zavřeno</span>
-              </div>
-              <div className="flex justify-between">
+                <span></span>
+                
                 <span className="text-muted-foreground">Úterý</span>
-                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">muži</span></span>
-              </div>
-              <div className="flex justify-between">
+                <span className="text-primary font-medium">16:00 - 21:00</span>
+                <span className="text-sm text-muted-foreground">muži</span>
+                
                 <span className="text-muted-foreground">Středa</span>
-                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">ženy</span></span>
-              </div>
-              <div className="flex justify-between">
+                <span className="text-primary font-medium">16:00 - 21:00</span>
+                <span className="text-sm text-muted-foreground">ženy</span>
+                
                 <span className="text-muted-foreground">Čtvrtek</span>
-                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">společná</span></span>
-              </div>
-              <div className="flex justify-between">
+                <span className="text-primary font-medium">16:00 - 21:00</span>
+                <span className="text-sm text-muted-foreground">společná</span>
+                
                 <span className="text-muted-foreground">Pátek</span>
-                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">společná</span></span>
-              </div>
-              <div className="flex justify-between">
+                <span className="text-primary font-medium">16:00 - 21:00</span>
+                <span className="text-sm text-muted-foreground">společná</span>
+                
                 <span className="text-muted-foreground">Sobota</span>
-                <span className="text-primary font-medium">15:00 - 20:00 <span className="text-sm text-muted-foreground">společná</span></span>
-              </div>
-              <div className="flex justify-between">
+                <span className="text-primary font-medium">15:00 - 20:00</span>
+                <span className="text-sm text-muted-foreground">společná</span>
+                
                 <span className="text-muted-foreground">Neděle</span>
-                <span className="text-primary font-medium">15:00 - 20:00 <span className="text-sm text-muted-foreground">společná</span></span>
+                <span className="text-primary font-medium">15:00 - 20:00</span>
+                <span className="text-sm text-muted-foreground">společná</span>
               </div>
             </CardContent>
           </Card>
