@@ -23,7 +23,7 @@ export const Contact = () => {
             isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'
           }`}>
             <CardHeader>
-              <CardTitle className="text-xl text-wood-deep">Otevírací doba – říjen 2025</CardTitle>
+              <CardTitle className="text-xl text-wood-deep">Otevírací doba – listopad 2025</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex justify-between">
@@ -32,32 +32,27 @@ export const Contact = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Úterý</span>
-                <span className="text-primary font-medium">Zavřeno</span>
+                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">muži</span></span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Středa</span>
-                <span className="text-primary font-medium">16:00 - 21:00</span>
+                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">ženy</span></span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Čtvrtek</span>
-                <span className="text-primary font-medium">16:00 - 21:00</span>
+                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">společná</span></span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Pátek</span>
-                <span className="text-primary font-medium">Zavřeno</span>
+                <span className="text-primary font-medium">16:00 - 21:00 <span className="text-sm text-muted-foreground">společná</span></span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Sobota</span>
-                <span className="text-primary font-medium">Zavřeno</span>
+                <span className="text-primary font-medium">15:00 - 20:00 <span className="text-sm text-muted-foreground">společná</span></span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Neděle</span>
-                <span className="text-primary font-medium">Zavřeno</span>
-              </div>
-              <div className="pt-4 border-t border-border">
-                <p className="text-sm text-muted-foreground">
-                  Rezervace doporučujeme předem telefonicky nebo online
-                </p>
+                <span className="text-primary font-medium">15:00 - 20:00 <span className="text-sm text-muted-foreground">společná</span></span>
               </div>
             </CardContent>
           </Card>
