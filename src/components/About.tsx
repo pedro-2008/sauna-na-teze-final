@@ -1,4 +1,6 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Card, CardContent } from "@/components/ui/card";
+import { Thermometer, Leaf, CheckCircle2 } from "lucide-react";
 
 export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -27,45 +29,61 @@ export const About = () => {
               s použitím kvalitního severského dřeva.
             </p>
             <p className="text-lg mb-8 text-muted-foreground leading-relaxed">Věříme v sílu saunování jako cesty k fyzické i mentální pohodě. V naší sauně najdete klid, regeneraci a prostor pro odpočinek od každodenního stresu.</p>
-            <div className="grid grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-medium mb-2 text-wood-deep">90°C</h3>
-                <p className="text-muted-foreground">Optimální teplota</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-medium mb-2 text-wood-deep">100%</h3>
-                <p className="text-muted-foreground">Přírodní materiály</p>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+              <Card className="bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Thermometer className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-medium mb-1 text-wood-deep">90°C</h3>
+                    <p className="text-sm text-muted-foreground">Optimální teplota</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-3 bg-accent/10 rounded-lg">
+                    <Leaf className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-medium mb-1 text-wood-deep">100%</h3>
+                    <p className="text-sm text-muted-foreground">Přírodní materiály</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
           
-          <div className={`bg-white/60 backdrop-blur-sm rounded-lg p-8 shadow-soft hover:shadow-warm transition-all duration-1000 ${
+          <Card className={`bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'
           }`}
           style={{ transitionDelay: '200ms' }}
           >
-            <h3 className="text-2xl font-medium mb-6 text-primary">
-              Proč finská sauna?
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-accent mt-2 mr-4 flex-shrink-0" />
-                <span className="text-muted-foreground">Zlepšuje krevní oběh a imunitní systém</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-accent mt-2 mr-4 flex-shrink-0" />
-                <span className="text-muted-foreground">Uvolňuje svalové napětí a bolest</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-accent mt-2 mr-4 flex-shrink-0" />
-                <span className="text-muted-foreground">Podporuje detoxikaci organismu</span>
-              </li>
-              <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-accent mt-2 mr-4 flex-shrink-0" />
-                <span className="text-muted-foreground">Snižuje stres a zlepšuje náladu</span>
-              </li>
-            </ul>
-          </div>
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-medium mb-6 text-primary">
+                Proč finská sauna?
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground">Zlepšuje krevní oběh a imunitní systém</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground">Uvolňuje svalové napětí a bolest</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground">Podporuje detoxikaci organismu</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground">Snižuje stres a zlepšuje náladu</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>;

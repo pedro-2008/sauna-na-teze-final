@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Facebook } from "lucide-react";
+import { Facebook, MapPin, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "@/components/ui/use-toast";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export const Contact = () => {
@@ -66,18 +64,27 @@ export const Contact = () => {
             <CardHeader>
               <CardTitle className="text-xl text-wood-deep">Kde nás najdete</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <p className="text-muted-foreground mb-1">Adresa</p>
-                <p className="text-primary font-medium">Lipová alej 4110/23, Hodonín</p>
+            <CardContent className="space-y-6">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-muted-foreground mb-1">Adresa</p>
+                  <p className="text-primary font-medium">Lipová alej 4110/23, Hodonín</p>
+                </div>
               </div>
-              <div>
-                <p className="text-muted-foreground mb-1">Telefon</p>
-                <p className="text-primary font-medium">+420 737 443 674</p>
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-muted-foreground mb-1">Telefon</p>
+                  <p className="text-primary font-medium">+420 737 443 674</p>
+                </div>
               </div>
-              <div>
-                <p className="text-muted-foreground mb-1">Email</p>
-                <p className="text-primary font-medium">janasportmasaz@seznam.cz</p>
+              <div className="flex items-start gap-3">
+                <Mail className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-muted-foreground mb-1">Email</p>
+                  <p className="text-primary font-medium">janasportmasaz@seznam.cz</p>
+                </div>
               </div>
               <div className="pt-4">
                 <a 
