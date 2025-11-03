@@ -1,33 +1,43 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Thermometer, Leaf, CheckCircle2 } from "lucide-react";
-
 export const About = () => {
-  const { ref, isVisible } = useScrollAnimation();
-  
+  const {
+    ref,
+    isVisible
+  } = useScrollAnimation();
   return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#efe8de] to-[#f8f5ef]">
       {/* Wave separator */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-        <svg className="relative block w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                className="fill-white"></path>
-        </svg>
+        
       </div>
       
       {/* Steam effect - visible rising steam */}
       <div className="absolute inset-0 pointer-events-none z-[1]">
-        <div className="absolute bottom-0 left-[15%] w-48 h-96 bg-white/80 rounded-full blur-3xl" style={{ animation: 'steam-rise 15s ease-in-out infinite' }} />
-        <div className="absolute bottom-0 left-[45%] w-40 h-80 bg-white/75 rounded-full blur-3xl" style={{ animation: 'steam-rise 18s ease-in-out infinite', animationDelay: '3s' }} />
-        <div className="absolute bottom-0 left-[75%] w-52 h-[28rem] bg-white/85 rounded-full blur-3xl" style={{ animation: 'steam-rise 20s ease-in-out infinite', animationDelay: '6s' }} />
-        <div className="absolute bottom-0 left-[60%] w-36 h-72 bg-white/70 rounded-full blur-3xl" style={{ animation: 'steam-rise 16s ease-in-out infinite', animationDelay: '9s' }} />
-        <div className="absolute bottom-0 left-[30%] w-44 h-88 bg-white/65 rounded-full blur-3xl" style={{ animation: 'steam-rise 17s ease-in-out infinite', animationDelay: '4.5s' }} />
+        <div className="absolute bottom-0 left-[15%] w-48 h-96 bg-white/80 rounded-full blur-3xl" style={{
+        animation: 'steam-rise 15s ease-in-out infinite'
+      }} />
+        <div className="absolute bottom-0 left-[45%] w-40 h-80 bg-white/75 rounded-full blur-3xl" style={{
+        animation: 'steam-rise 18s ease-in-out infinite',
+        animationDelay: '3s'
+      }} />
+        <div className="absolute bottom-0 left-[75%] w-52 h-[28rem] bg-white/85 rounded-full blur-3xl" style={{
+        animation: 'steam-rise 20s ease-in-out infinite',
+        animationDelay: '6s'
+      }} />
+        <div className="absolute bottom-0 left-[60%] w-36 h-72 bg-white/70 rounded-full blur-3xl" style={{
+        animation: 'steam-rise 16s ease-in-out infinite',
+        animationDelay: '9s'
+      }} />
+        <div className="absolute bottom-0 left-[30%] w-44 h-88 bg-white/65 rounded-full blur-3xl" style={{
+        animation: 'steam-rise 17s ease-in-out infinite',
+        animationDelay: '4.5s'
+      }} />
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className={`transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'
-          }`}>
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'}`}>
             <h2 className="text-4xl md:text-5xl font-light mb-8 text-primary">
               Teplo, ticho a vůně dřeva
             </h2>
@@ -68,25 +78,13 @@ export const About = () => {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg">
-                    <Leaf className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-1 text-[hsl(73,21%,60%)]">100%</h3>
-                    <p className="text-sm text-muted-foreground">Přírodní materiály</p>
-                  </div>
-                </CardContent>
-              </Card>
+              
             </div>
           </div>
           
-          <Card className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px] duration-300 hover:scale-105 hover:-translate-y-2 ${
-            isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'
-          }`}
-          style={{ transitionDelay: '200ms' }}
-          >
+          <Card className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px] duration-300 hover:scale-105 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'}`} style={{
+          transitionDelay: '200ms'
+        }}>
             <CardContent className="p-8">
               <h3 className="text-2xl font-medium mb-6 text-primary">
                 Proč finská sauna?
