@@ -57,7 +57,7 @@ export const About = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-2 rounded-[20px]">
+              <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
                     <Thermometer className="w-8 h-8 text-primary" />
@@ -68,7 +68,7 @@ export const About = () => {
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-2 rounded-[20px]">
+              <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
                     <Leaf className="w-8 h-8 text-primary" />
