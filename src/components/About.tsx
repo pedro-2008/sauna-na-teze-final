@@ -6,6 +6,13 @@ export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#f7f3ee] to-[#f1ebe4]">
+      {/* Jemná vlnka oddělovač */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+        <svg className="relative block w-full h-12 md:h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,50 Q300,20 600,50 T1200,50 L1200,0 L0,0 Z" 
+                className="fill-white opacity-80"></path>
+        </svg>
+      </div>
       
       {/* Steam effect - visible rising steam */}
       <div className="absolute inset-0 pointer-events-none z-[1]">
