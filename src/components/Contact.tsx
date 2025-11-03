@@ -5,7 +5,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 export const Contact = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section ref={ref} className="py-24 px-6">
+  return <section id="contact" ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#f8f5ef] to-[#efe8de]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">
