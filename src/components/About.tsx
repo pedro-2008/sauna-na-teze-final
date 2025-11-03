@@ -6,7 +6,7 @@ export const About = () => {
     ref,
     isVisible
   } = useScrollAnimation();
-  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-wood-light">
+  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'}`}>
