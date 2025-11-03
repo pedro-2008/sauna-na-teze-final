@@ -6,7 +6,7 @@ export const About = () => {
     ref,
     isVisible
   } = useScrollAnimation();
-  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#efe8de] to-[#f8f5ef]">
+  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden">
       {/* Wave separator */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         
