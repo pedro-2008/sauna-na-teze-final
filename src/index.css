@@ -116,7 +116,5 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(circle closest-corner at center, #f7b78d 17%, #d49459 100%);
-    background-attachment: fixed;
   }
 }
