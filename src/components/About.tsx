@@ -39,20 +39,20 @@ export const About = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🔥</span>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  <strong>Teplo, které léčí</strong> – optimální teplota 90°C pro dokonalou regeneraci
+                <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                  Teplo, které léčí
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl">💧</span>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  <strong>Očista těla i mysli</strong> – detoxikace organismu a uvolnění stresu
+                <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                  Očista těla i mysli
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🌿</span>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  <strong>Přírodní materiály</strong> – severské dřevo a tradiční finské postupy
+                <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                  Přírodní materiály
                 </p>
               </div>
             </div>
