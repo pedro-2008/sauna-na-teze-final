@@ -6,8 +6,15 @@ export const Pricing = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#efe8de] to-[#f8f5ef]">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#efe8de] to-[#f8f5ef] relative overflow-hidden">
+      {/* Vlnka oddělovač */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+        <svg className="relative block w-full h-16 md:h-24" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,60 Q300,10 600,60 T1200,60 L1200,0 L0,0 Z" 
+                className="fill-[#f7f3ee]"></path>
+        </svg>
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className={`transition-all duration-1000 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
         }`}>
