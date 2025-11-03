@@ -115,8 +115,8 @@ All colors MUST be HSL.
   }
 
   body {
-    background: linear-gradient(135deg, #d9c2a3 0%, #b18a68 50%, #8c6b4f 100%);
+    @apply bg-background text-foreground;
+    background: linear-gradient(to bottom, #f8f4ef, #e3d4c3);
     background-attachment: fixed;
-    color: #3a2e25;
   }
 }
