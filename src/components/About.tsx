@@ -1,15 +1,11 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Thermometer, Leaf, CheckCircle2 } from "lucide-react";
-import { WaveDivider } from "@/components/WaveDivider";
 
 export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#f7f3ee] to-[#f1ebe4]">
-      <div className="absolute top-0 left-0 w-full">
-        <WaveDivider />
-      </div>
       
       {/* Steam effect - visible rising steam */}
       <div className="absolute inset-0 pointer-events-none z-[1]">
