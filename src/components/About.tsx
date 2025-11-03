@@ -5,7 +5,15 @@ import { Thermometer, Leaf, CheckCircle2 } from "lucide-react";
 export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden">
+  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#f7f3ee] to-[#f1ebe4]">
+      {/* Wave separator */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+        <svg className="relative block w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
+                className="fill-white"></path>
+        </svg>
+      </div>
+      
       {/* Steam effect - visible rising steam */}
       <div className="absolute inset-0 pointer-events-none z-[1]">
         <div className="absolute bottom-0 left-[15%] w-48 h-96 bg-white/80 rounded-full blur-3xl" style={{ animation: 'steam-rise 15s ease-in-out infinite' }} />
@@ -21,14 +29,33 @@ export const About = () => {
             isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'
           }`}>
             <h2 className="text-4xl md:text-5xl font-light mb-8 text-primary">
-              Finská tradice
+              Teplo, ticho a vůně dřeva
             </h2>
             <p className="text-lg mb-6 text-muted-foreground leading-relaxed">
               Sauna Na Teze přináší autentický finský zážitek do Hodonína. 
               Naše sauna je postavena podle tradičních finských postupů 
               s použitím kvalitního severského dřeva.
             </p>
-            <p className="text-lg mb-8 text-muted-foreground leading-relaxed">Věříme v sílu saunování jako cesty k fyzické i mentální pohodě. V naší sauně najdete klid, regeneraci a prostor pro odpočinek od každodenního stresu.</p>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🔥</span>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  <strong>Teplo, které léčí</strong> – optimální teplota 90°C pro dokonalou regeneraci
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">💧</span>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  <strong>Očista těla i mysli</strong> – detoxikace organismu a uvolnění stresu
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🌿</span>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  <strong>Přírodní materiály</strong> – severské dřevo a tradiční finské postupy
+                </p>
+              </div>
+            </div>
             <div className="grid grid-cols-2 gap-4">
               <Card className="bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all">
                 <CardContent className="p-6 flex items-center gap-4">
