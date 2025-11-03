@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dumbbell, Sparkles, CircleDot, Brain, Flame, Bed, Bandage, Waves } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { WaveDivider } from "@/components/WaveDivider";
 
 export const Services = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -54,8 +55,11 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#f1ebe4] to-[#f7f3ee]">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#f1ebe4] to-[#f7f3ee] relative">
+      <div className="absolute top-0 left-0 w-full">
+        <WaveDivider />
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-playfair font-light mb-6 text-primary">Naše služby</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

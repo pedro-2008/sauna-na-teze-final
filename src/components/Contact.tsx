@@ -1,12 +1,16 @@
 import { Facebook, MapPin, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { WaveDivider } from "@/components/WaveDivider";
 
 export const Contact = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section ref={ref} className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+  return <section ref={ref} className="py-24 px-6 relative">
+      <div className="absolute top-0 left-0 w-full">
+        <WaveDivider />
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">
             Kontakt a rezervace

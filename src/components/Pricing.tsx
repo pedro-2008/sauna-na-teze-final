@@ -1,13 +1,17 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { User, Baby, Clock, Ticket, Heart } from "lucide-react";
+import { WaveDivider } from "@/components/WaveDivider";
 
 export const Pricing = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#efe8de] to-[#f8f5ef]">
-      <div className="max-w-6xl mx-auto">
+    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#efe8de] to-[#f8f5ef] relative">
+      <div className="absolute top-0 left-0 w-full">
+        <WaveDivider />
+      </div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className={`transition-all duration-1000 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
         }`}>
