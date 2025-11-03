@@ -41,6 +41,7 @@ All colors MUST be HSL.
     --wood-deep: 25 35% 25%;
     --steam-light: 35 15% 92%;
     --stone-grey: 210 8% 55%;
+    --olive-green: 73 21% 60%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(28 45% 65% / 0.1), hsl(25 35% 25% / 0.05));
