@@ -69,7 +69,7 @@ export const Services = () => {
             return (
               <Card 
                 key={index} 
-                className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px] ${
+                className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-2 rounded-[20px] ${
                   isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                 }`}
                 style={{ 
