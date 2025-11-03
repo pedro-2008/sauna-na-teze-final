@@ -54,10 +54,10 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#f1ebe4] to-[#f7f3ee]">
+    <section ref={ref} className="py-24 px-6 bg-gradient-to-b from-[#efe8de] to-[#f8f5ef]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-playfair font-light mb-6 text-primary">Naše služby</h2>
+          <h2 className="text-4xl md:text-5xl font-light mb-12 text-primary">Naše služby</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Finská sauna, vířivé vany a masážní služby
           </p>
@@ -69,7 +69,7 @@ export const Services = () => {
             return (
               <Card 
                 key={index} 
-                className={`bg-white/80 border-0 shadow-soft hover:shadow-warm transition-all duration-700 hover:scale-105 hover:-translate-y-1 group rounded-[20px] ${
+                className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px] ${
                   isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                 }`}
                 style={{ 
@@ -78,20 +78,20 @@ export const Services = () => {
               >
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-6 h-6 text-accent group-hover:animate-spin-slow" />
+                    <div className="p-2 bg-accent/10 rounded-lg">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <CardTitle className="text-xl text-wood-deep font-playfair">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-wood-deep">{service.title}</CardTitle>
                   </div>
-                  <div className="text-2xl font-light text-[hsl(73,21%,60%)] mt-2">{service.price}</div>
+                  <div className="text-2xl font-semibold text-[hsl(73,21%,60%)] mt-2">{service.price}</div>
                 </CardHeader>
               <CardContent>
-                <p className="text-[#3E3B2F]/80 mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-[#3E3B2F]/70">
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 rounded-full bg-[hsl(73,21%,60%)] mr-3" />
                       {feature}
                     </li>

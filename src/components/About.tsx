@@ -5,7 +5,7 @@ import { Thermometer, Leaf, CheckCircle2 } from "lucide-react";
 export const About = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#f7f3ee] to-[#f1ebe4]">
+  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-[#efe8de] to-[#f8f5ef]">
       {/* Wave separator */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg className="relative block w-full h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -57,24 +57,24 @@ export const About = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <Card className="bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all">
+              <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px]">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
-                    <Thermometer className="w-8 h-8 text-accent" />
+                    <Thermometer className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-medium mb-1 text-wood-deep">90°C</h3>
+                    <h3 className="text-2xl font-semibold mb-1 text-[hsl(73,21%,60%)]">90°C</h3>
                     <p className="text-sm text-muted-foreground">Optimální teplota</p>
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all">
+              <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px]">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
-                    <Leaf className="w-8 h-8 text-accent" />
+                    <Leaf className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-medium mb-1 text-wood-deep">100%</h3>
+                    <h3 className="text-2xl font-semibold mb-1 text-[hsl(73,21%,60%)]">100%</h3>
                     <p className="text-sm text-muted-foreground">Přírodní materiály</p>
                   </div>
                 </CardContent>
@@ -82,7 +82,7 @@ export const About = () => {
             </div>
           </div>
           
-          <Card className={`bg-white/60 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-1000 ${
+          <Card className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px] duration-1000 ${
             isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'
           }`}
           style={{ transitionDelay: '200ms' }}
@@ -93,19 +93,19 @@ export const About = () => {
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground">Zlepšuje krevní oběh a imunitní systém</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground">Uvolňuje svalové napětí a bolest</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground">Podporuje detoxikaci organismu</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-muted-foreground">Snižuje stres a zlepšuje náladu</span>
                 </li>
               </ul>
