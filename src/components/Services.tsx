@@ -31,7 +31,7 @@ export const Services = () => {
   }, {
     title: "Masáž lávovými kameny",
     price: "950 Kč",
-    description: "Luxusní masáž s využitím horkých vulkanických kamenů pro hlubokou relaxaci.",
+    description: "Masáž s využitím horkých vulkanických kamenů pro hlubokou relaxaci.",
     features: ["Horké lávové kameny", "Hluboká relaxace", "60 minut"],
     icon: Flame
   }, {
