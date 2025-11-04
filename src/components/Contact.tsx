@@ -12,7 +12,7 @@ export const Contact = () => {
             Kontakt a rezervace
           </h2>
           <p className="text-lg" style={{ color: 'hsl(var(--contact-main-text))' }}>
-            Těšíme se na vaši návštěvu v Sauna Na Teze
+            Těšíme se na vaši návštěvu
           </p>
         </div>
         
