@@ -5,19 +5,22 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 export const Contact = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section id="contact" ref={ref} className="py-24 px-6">
+  return <section id="contact" ref={ref} className="py-24 px-6" style={{
+      background: 'linear-gradient(to bottom, #4B2E14, #3C2410)',
+      boxShadow: '0 -10px 30px rgba(0, 0, 0, 0.05)'
+    }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-6 text-primary">
+          <h2 className="text-4xl md:text-5xl font-light mb-6 text-white">
             Kontakt a rezervace
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-white/80">
             Těšíme se na vaši návštěvu v Sauna Na Teze
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">
-          <Card className={`border-0 shadow-soft hover:shadow-warm transition-all duration-1000 ${
+          <Card className={`border-0 bg-white/90 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <CardHeader>
@@ -56,7 +59,7 @@ export const Contact = () => {
             </CardContent>
           </Card>
 
-          <Card className={`border-0 shadow-soft hover:shadow-warm transition-all duration-1000 ${
+          <Card className={`border-0 bg-white/90 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '200ms' }}

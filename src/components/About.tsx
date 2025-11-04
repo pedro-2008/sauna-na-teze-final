@@ -6,7 +6,10 @@ export const About = () => {
     ref,
     isVisible
   } = useScrollAnimation();
-  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-cream">
+  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden" style={{
+      background: 'linear-gradient(to bottom, #F9F5F1, #F2E3D5)',
+      boxShadow: '0 -10px 30px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.05)'
+    }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

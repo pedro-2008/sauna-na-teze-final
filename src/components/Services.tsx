@@ -54,7 +54,10 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section id="services" ref={ref} className="py-24 px-6 bg-secondary/30">
+    <section id="services" ref={ref} className="py-24 px-6" style={{
+      background: 'linear-gradient(to bottom, #E3CDA4, #E8D5B6)',
+      boxShadow: '0 -10px 30px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.05)'
+    }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-primary">Naše služby</h2>
