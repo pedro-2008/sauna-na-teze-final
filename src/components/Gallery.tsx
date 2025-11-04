@@ -11,15 +11,6 @@ export const Gallery = () => {
       <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
       
       <div className="max-w-6xl mx-auto">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-light mb-4" style={{ color: 'hsl(var(--services-heading))' }}>
-            Relaxace a regenerace
-          </h2>
-          <p className="text-lg" style={{ color: 'hsl(var(--services-accent-text))' }}>
-            Dopřejte si chvíli klidu a odpočinku
-          </p>
-        </div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                style={{ transitionDelay: '200ms' }}>
