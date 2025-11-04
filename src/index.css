@@ -72,6 +72,14 @@ Updated: Nová teplá dřevěná barevná paleta
     --contact-accent: 39 78% 77%;
     --contact-icon: 27 34% 34%;
     
+    /* Contact Card/Box Colors */
+    --contact-card-bg: 30 33% 94%;
+    --contact-card-text: 27 58% 15%;
+    --contact-card-heading: 28 58% 19%;
+    --contact-card-secondary: 31 25% 44%;
+    --contact-card-accent: 36 49% 47%;
+    --contact-card-border: 34 37% 76%;
+    
     /* Gradients - sekce */
     --gradient-hero: linear-gradient(to top, hsl(27 70% 22%), hsl(27 53% 27%));
     --gradient-about: linear-gradient(to bottom, hsl(30 33% 96%), hsl(35 45% 91%));
