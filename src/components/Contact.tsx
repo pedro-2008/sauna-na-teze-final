@@ -102,6 +102,40 @@ export const Contact = () => {
             </CardContent>
           </Card>
         </div>
+
+        <div 
+          className={`mt-12 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          style={{ transitionDelay: '400ms' }}
+        >
+          <Card 
+            className="shadow-soft hover:shadow-warm transition-shadow duration-300 overflow-hidden"
+            style={{ 
+              backgroundColor: 'hsl(var(--contact-card-bg))',
+              borderColor: 'hsl(var(--contact-card-border))',
+              borderWidth: '1px'
+            }}
+          >
+            <CardHeader>
+              <CardTitle className="text-xl" style={{ color: 'hsl(var(--contact-card-heading))' }}>Mapa</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="w-full h-[400px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.8234567890123!2d17.1234567890123!3d48.8523456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0a123456789a%3A0x123456789abcdef0!2sLipov%C3%A1%20alej%204110%2F23%2C%20695%2001%20Hodon%C3%ADn!5e0!3m2!1scs!2scz!4v1234567890123!5m2!1scs!2scz"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mapa - Sauna Na Teze"
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>;
 };
