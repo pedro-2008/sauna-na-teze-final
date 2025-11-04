@@ -17,6 +17,7 @@ export const About = () => {
             </h2>
             <p className="text-lg mb-6 leading-relaxed" style={{ color: 'hsl(var(--about-main-text))' }}>
               Ticho, teplo a klid.
+              Místo, kde si můžete odpočinout od všeho a být sami sebou.
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
