@@ -11,7 +11,7 @@ export const Hero = () => {
       </div>
       
       {/* Oddělovací linka mezi tmavou Hero a světlou About */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
