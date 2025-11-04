@@ -47,7 +47,7 @@ Updated: Nová teplá dřevěná barevná paleta
     /* Gradients - sekce */
     --gradient-hero: linear-gradient(to top, hsl(27 70% 22%), hsl(27 53% 27%));
     --gradient-about: linear-gradient(to bottom, hsl(30 33% 96%), hsl(35 45% 91%));
-    --gradient-services: linear-gradient(to bottom, hsl(39 52% 77%), hsl(40 48% 81%));
+    --gradient-services: linear-gradient(to bottom, hsl(35 37% 75%), hsl(35 37% 75%));
     --gradient-pricing: linear-gradient(to bottom, hsl(0 0% 100%), hsl(30 33% 96%));
     --gradient-contact: linear-gradient(to bottom, hsl(27 70% 22%), hsl(28 66% 16%));
     
