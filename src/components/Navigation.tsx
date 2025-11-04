@@ -31,20 +31,13 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white shadow-md"
-          : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className={`text-2xl font-light transition-colors ${
-              isScrolled ? "text-primary" : "text-white"
-            }`}
+            className="text-2xl font-light text-primary transition-colors"
           >
             Sauna Na Teze
           </button>
@@ -55,9 +48,7 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-medium transition-colors hover:text-accent ${
-                  isScrolled ? "text-primary" : "text-white"
-                }`}
+                className="font-medium text-primary transition-colors hover:text-accent"
               >
                 {item.label}
               </button>
@@ -72,9 +63,9 @@ export const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className={isScrolled ? "text-primary" : "text-white"} />
+              <X className="text-primary" />
             ) : (
-              <Menu className={isScrolled ? "text-primary" : "text-white"} />
+              <Menu className="text-primary" />
             )}
           </Button>
         </div>
@@ -86,9 +77,7 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left py-2 font-medium transition-colors hover:text-accent ${
-                  isScrolled ? "text-primary" : "text-white"
-                }`}
+                className="block w-full text-left py-2 font-medium text-primary transition-colors hover:text-accent"
               >
                 {item.label}
               </button>
