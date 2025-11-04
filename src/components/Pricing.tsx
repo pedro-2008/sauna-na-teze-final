@@ -9,7 +9,7 @@ export const Pricing = () => {
     <section id="pricing" ref={ref} className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${
-          isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-center text-primary">
             Ceník – Finská sauna

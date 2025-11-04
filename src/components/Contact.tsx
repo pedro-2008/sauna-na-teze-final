@@ -18,7 +18,7 @@ export const Contact = () => {
         
         <div className="grid md:grid-cols-2 gap-12">
           <Card className={`border-0 shadow-soft hover:shadow-warm transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <CardHeader>
               <CardTitle className="text-xl text-wood-dark">Otevírací doba – listopad 2025</CardTitle>
@@ -57,7 +57,7 @@ export const Contact = () => {
           </Card>
 
           <Card className={`border-0 shadow-soft hover:shadow-warm transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '200ms' }}
           >

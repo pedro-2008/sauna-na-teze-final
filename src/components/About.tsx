@@ -9,7 +9,7 @@ export const About = () => {
   return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-cream">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'}`}>
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h2 className="text-4xl md:text-5xl font-light mb-8 text-primary">
               Teplo, ticho a vůně dřeva
             </h2>
@@ -54,7 +54,7 @@ export const About = () => {
             </div>
           </div>
           
-          <Card className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px] duration-300 hover:scale-105 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 translate-x-12 scale-95'}`} style={{
+          <Card className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all rounded-[20px] duration-1000 hover:scale-105 hover:-translate-y-2 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{
           transitionDelay: '200ms'
         }}>
             <CardContent className="p-8">
