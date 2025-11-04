@@ -8,48 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 25 15% 15%;
+    --background: 30 33% 96%;
+    --foreground: 28 58% 19%;
 
     --card: 0 0% 100%;
-    --card-foreground: 25 15% 15%;
+    --card-foreground: 28 58% 19%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 15% 15%;
+    --popover-foreground: 28 58% 19%;
 
-    --primary: 25 35% 25%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 27 47% 37%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 25% 85%;
-    --secondary-foreground: 25 35% 25%;
+    --secondary: 39 52% 77%;
+    --secondary-foreground: 28 58% 19%;
 
-    --muted: 35 15% 92%;
-    --muted-foreground: 25 12% 45%;
+    --muted: 39 52% 85%;
+    --muted-foreground: 28 40% 40%;
 
-    --accent: 28 45% 65%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 105 9% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 35 15% 88%;
-    --input: 35 15% 88%;
-    --ring: 25 35% 25%;
+    --border: 39 52% 85%;
+    --input: 39 52% 85%;
+    --ring: 27 47% 37%;
 
-    /* Nordic/Sauna Design Tokens */
-    --wood-warm: 28 45% 65%;
-    --wood-deep: 25 35% 25%;
-    --steam-light: 35 15% 92%;
-    --stone-grey: 210 8% 55%;
-    --olive-green: 73 21% 60%;
+    /* Sauna Design Tokens */
+    --wood-warm: 27 47% 37%;
+    --wood-light: 39 52% 77%;
+    --wood-dark: 28 58% 19%;
+    --cream: 30 33% 96%;
+    --eco-green: 105 9% 50%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(28 45% 65% / 0.1), hsl(25 35% 25% / 0.05));
-    --gradient-warm: linear-gradient(45deg, hsl(28 45% 65%), hsl(35 25% 85%));
+    --gradient-hero: linear-gradient(135deg, hsl(27 47% 37% / 0.1), hsl(28 58% 19% / 0.05));
+    --gradient-warm: linear-gradient(45deg, hsl(27 47% 37%), hsl(39 52% 77%));
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(25 35% 25% / 0.08);
-    --shadow-warm: 0 8px 30px hsl(28 45% 65% / 0.15);
+    --shadow-soft: 0 4px 20px hsl(28 58% 19% / 0.08);
+    --shadow-warm: 0 8px 30px hsl(27 47% 37% / 0.15);
 
     --radius: 0.5rem;
 

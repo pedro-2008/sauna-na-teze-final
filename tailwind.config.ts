@@ -52,16 +52,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Nordic/Sauna Design Tokens
+				// Sauna Design Tokens
 				wood: {
 					warm: 'hsl(var(--wood-warm))',
-					deep: 'hsl(var(--wood-deep))'
+					light: 'hsl(var(--wood-light))',
+					dark: 'hsl(var(--wood-dark))'
 				},
-				steam: {
-					light: 'hsl(var(--steam-light))'
-				},
-				stone: {
-					grey: 'hsl(var(--stone-grey))'
+				cream: 'hsl(var(--cream))',
+				eco: {
+					green: 'hsl(var(--eco-green))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
