@@ -55,8 +55,8 @@ export const Services = () => {
   }];
   return (
     <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services">
-      {/* Oddělovací linka mezi světlými sekcemi Services a Pricing */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(216, 199, 170, 0.35)' }} />
+      {/* Přechodový pás mezi službami a ceníkem */}
+      <div className="absolute bottom-0 left-0 right-0 h-[70px]" style={{ background: 'linear-gradient(to bottom, #E3CDA4 0%, #EDE0C8 50%, #FFFFFF 100%)' }} />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-primary">Naše služby</h2>
