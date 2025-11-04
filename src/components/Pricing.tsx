@@ -19,7 +19,7 @@ export const Pricing = () => {
             {/* Jednorázový vstup */}
             <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
               <CardHeader>
-                <CardTitle className="text-2xl text-wood-deep">Jednorázový vstup</CardTitle>
+                <CardTitle className="text-2xl text-wood-dark">Jednorázový vstup</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center justify-between">
@@ -27,7 +27,7 @@ export const Pricing = () => {
                     <User className="w-5 h-5 text-primary" />
                     <span className="text-muted-foreground">1 osoba / 2 hodiny</span>
                   </div>
-                  <span className="text-3xl font-semibold text-[hsl(73,21%,60%)]">250 Kč</span>
+                  <span className="text-3xl font-semibold text-eco-green">250 Kč</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
@@ -35,7 +35,7 @@ export const Pricing = () => {
                     <Baby className="w-5 h-5 text-primary" />
                     <span className="text-muted-foreground">Děti do 15 let</span>
                   </div>
-                  <span className="text-3xl font-semibold text-[hsl(73,21%,60%)]">150 Kč</span>
+                  <span className="text-3xl font-semibold text-eco-green">150 Kč</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
@@ -43,7 +43,7 @@ export const Pricing = () => {
                     <Clock className="w-5 h-5 text-primary" />
                     <span className="text-muted-foreground">Časově neomezený vstup</span>
                   </div>
-                  <span className="text-3xl font-semibold text-[hsl(73,21%,60%)]">350 Kč</span>
+                  <span className="text-3xl font-semibold text-eco-green">350 Kč</span>
                 </div>
               </CardContent>
             </Card>
@@ -51,7 +51,7 @@ export const Pricing = () => {
             {/* Permanentky */}
             <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
               <CardHeader>
-                <CardTitle className="text-2xl text-wood-deep">Permanentky</CardTitle>
+                <CardTitle className="text-2xl text-wood-dark">Permanentky</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center justify-between">
@@ -59,7 +59,7 @@ export const Pricing = () => {
                     <Ticket className="w-5 h-5 text-primary" />
                     <span className="text-muted-foreground">10 vstupů</span>
                   </div>
-                  <span className="text-3xl font-semibold text-[hsl(73,21%,60%)]">2300 Kč</span>
+                  <span className="text-3xl font-semibold text-eco-green">2300 Kč</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
@@ -67,11 +67,11 @@ export const Pricing = () => {
                     <Ticket className="w-5 h-5 text-primary" />
                     <span className="text-muted-foreground">20 vstupů</span>
                   </div>
-                  <span className="text-3xl font-semibold text-[hsl(73,21%,60%)]">4200 Kč</span>
+                  <span className="text-3xl font-semibold text-eco-green">4200 Kč</span>
                 </div>
                 
                 <div className="flex items-start gap-3 pt-4 border-t border-wood-light/20">
-                  <Heart className="w-5 h-5 text-[hsl(73,21%,60%)] mt-0.5 flex-shrink-0" />
+                  <Heart className="w-5 h-5 text-eco-green mt-0.5 flex-shrink-0" />
                   <p className="text-sm text-muted-foreground">
                     Permanentky jsou přenosné – můžete je sdílet s rodinou nebo přáteli.
                   </p>

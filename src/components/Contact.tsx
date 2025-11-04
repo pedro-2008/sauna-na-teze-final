@@ -21,7 +21,7 @@ export const Contact = () => {
             isVisible ? 'opacity-100 translate-x-0 scale-100' : 'opacity-0 -translate-x-12 scale-95'
           }`}>
             <CardHeader>
-              <CardTitle className="text-xl text-wood-deep">Otevírací doba – listopad 2025</CardTitle>
+              <CardTitle className="text-xl text-wood-dark">Otevírací doba – listopad 2025</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-[1fr,auto,auto] gap-y-4 gap-x-6 items-center">
@@ -62,7 +62,7 @@ export const Contact = () => {
           style={{ transitionDelay: '200ms' }}
           >
             <CardHeader>
-              <CardTitle className="text-xl text-wood-deep">Kde nás najdete</CardTitle>
+              <CardTitle className="text-xl text-wood-dark">Kde nás najdete</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-start gap-3">

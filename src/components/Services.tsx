@@ -81,9 +81,9 @@ export const Services = () => {
                     <div className="p-2 bg-accent/10 rounded-lg">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <CardTitle className="text-xl text-wood-deep">{service.title}</CardTitle>
+                    <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
                   </div>
-                  <div className="text-2xl font-semibold text-[hsl(73,21%,60%)] mt-2">{service.price}</div>
+                  <div className="text-2xl font-semibold text-eco-green mt-2">{service.price}</div>
                 </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -92,7 +92,7 @@ export const Services = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[hsl(73,21%,60%)] mr-3" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-eco-green mr-3" />
                       {feature}
                     </li>
                   ))}

@@ -45,7 +45,7 @@ export const About = () => {
                     <Thermometer className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold mb-1 text-[hsl(73,21%,60%)]">90°C</h3>
+                    <h3 className="text-2xl font-semibold mb-1 text-primary">90°C</h3>
                     <p className="text-sm text-muted-foreground">Optimální teplota</p>
                   </div>
                 </CardContent>
