@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent } from "@/components/ui/card";
-import { Thermometer, Leaf, CheckCircle2 } from "lucide-react";
+import { Thermometer, Leaf, CheckCircle2, Flame, Droplet, Sprout } from "lucide-react";
 export const About = () => {
   const {
     ref,
@@ -22,19 +22,19 @@ export const About = () => {
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
-                <span className="text-2xl">🔥</span>
+                <Flame className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--about-accent-text))' }} />
                 <p className="text-lg leading-relaxed font-medium" style={{ color: 'hsl(var(--about-main-text))' }}>
                   Teplo, které léčí
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">💧</span>
+                <Droplet className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--about-accent-text))' }} />
                 <p className="text-lg leading-relaxed font-medium" style={{ color: 'hsl(var(--about-main-text))' }}>
                   Očista těla i mysli
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">🌿</span>
+                <Sprout className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--about-accent-text))' }} />
                 <p className="text-lg leading-relaxed font-medium" style={{ color: 'hsl(var(--about-main-text))' }}>
                   Přírodní materiály
                 </p>
