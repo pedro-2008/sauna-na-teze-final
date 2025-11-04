@@ -12,10 +12,10 @@ export const About = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h2 className="text-4xl md:text-5xl font-light mb-8 text-primary">
+            <h2 className="text-4xl md:text-5xl font-light mb-8" style={{ color: 'hsl(var(--about-heading))' }}>
               Teplo, ticho a vůně dřeva
             </h2>
-            <p className="text-lg mb-6 text-muted-foreground leading-relaxed">
+            <p className="text-lg mb-6 leading-relaxed" style={{ color: 'hsl(var(--about-main-text))' }}>
               Sauna Na Teze přináší autentický finský zážitek do Hodonína. 
               Naše sauna je postavena podle tradičních finských postupů 
               s použitím kvalitního severského dřeva.
@@ -23,19 +23,19 @@ export const About = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🔥</span>
-                <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                <p className="text-lg leading-relaxed font-medium" style={{ color: 'hsl(var(--about-main-text))' }}>
                   Teplo, které léčí
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl">💧</span>
-                <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                <p className="text-lg leading-relaxed font-medium" style={{ color: 'hsl(var(--about-main-text))' }}>
                   Očista těla i mysli
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🌿</span>
-                <p className="text-lg text-muted-foreground leading-relaxed font-medium">
+                <p className="text-lg leading-relaxed font-medium" style={{ color: 'hsl(var(--about-main-text))' }}>
                   Přírodní materiály
                 </p>
               </div>
@@ -44,11 +44,11 @@ export const About = () => {
               <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
                 <CardContent className="p-6 flex items-center gap-4">
                   <div className="p-3 bg-accent/10 rounded-lg">
-                    <Thermometer className="w-8 h-8 text-primary" />
+                    <Thermometer className="w-8 h-8" style={{ color: 'hsl(var(--about-heading))' }} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold mb-1 text-primary">90°C</h3>
-                    <p className="text-sm text-muted-foreground">Optimální teplota</p>
+                    <h3 className="text-2xl font-semibold mb-1" style={{ color: 'hsl(var(--about-heading))' }}>90°C</h3>
+                    <p className="text-sm" style={{ color: 'hsl(var(--about-accent-text))' }}>Optimální teplota</p>
                   </div>
                 </CardContent>
               </Card>
@@ -60,25 +60,25 @@ export const About = () => {
           transitionDelay: '200ms'
         }}>
             <CardContent className="p-8">
-              <h3 className="text-2xl font-medium mb-6 text-primary">
+              <h3 className="text-2xl font-medium mb-6" style={{ color: 'hsl(var(--about-heading))' }}>
                 Proč finská sauna?
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Zlepšuje krevní oběh a imunitní systém</span>
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(var(--about-heading))' }} />
+                  <span style={{ color: 'hsl(var(--about-main-text))' }}>Zlepšuje krevní oběh a imunitní systém</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Uvolňuje svalové napětí a bolest</span>
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(var(--about-heading))' }} />
+                  <span style={{ color: 'hsl(var(--about-main-text))' }}>Uvolňuje svalové napětí a bolest</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Podporuje detoxikaci organismu</span>
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(var(--about-heading))' }} />
+                  <span style={{ color: 'hsl(var(--about-main-text))' }}>Podporuje detoxikaci organismu</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">Snižuje stres a zlepšuje náladu</span>
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'hsl(var(--about-heading))' }} />
+                  <span style={{ color: 'hsl(var(--about-main-text))' }}>Snižuje stres a zlepšuje náladu</span>
                 </li>
               </ul>
             </CardContent>

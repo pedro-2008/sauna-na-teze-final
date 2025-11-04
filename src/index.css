@@ -49,6 +49,11 @@ Updated: Nová teplá dřevěná barevná paleta
     --hero-main-text: 30 33% 96%;
     --hero-accent-text: 40 52% 77%;
     
+    /* About Text Colors */
+    --about-heading: 27 58% 19%;
+    --about-main-text: 28 66% 16%;
+    --about-accent-text: 28 36% 35%;
+    
     /* Gradients - sekce */
     --gradient-hero: linear-gradient(to top, hsl(27 70% 22%), hsl(27 53% 27%));
     --gradient-about: linear-gradient(to bottom, hsl(30 33% 96%), hsl(35 45% 91%));
