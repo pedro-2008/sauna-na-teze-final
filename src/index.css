@@ -65,16 +65,19 @@ Updated: Nová teplá dřevěná barevná paleta
     --pricing-accent-text: 31 36% 35%;
     
     /* Contact Text Colors */
-    --contact-heading: 0 0% 100%;
+    --contact-bg: 28 58% 19%;
+    --contact-heading: 39 52% 77%;
     --contact-main-text: 30 33% 96%;
-    --contact-accent-text: 40 52% 77%;
+    --contact-secondary-text: 34 37% 76%;
+    --contact-accent: 39 78% 77%;
+    --contact-icon: 27 34% 34%;
     
     /* Gradients - sekce */
     --gradient-hero: linear-gradient(to top, hsl(27 70% 22%), hsl(27 53% 27%));
     --gradient-about: linear-gradient(to bottom, hsl(30 33% 96%), hsl(35 45% 91%));
     --gradient-services: linear-gradient(to bottom, hsl(35 37% 75%), hsl(35 37% 75%));
     --gradient-pricing: linear-gradient(to bottom, hsl(0 0% 100%), hsl(30 33% 96%));
-    --gradient-contact: linear-gradient(to bottom, hsl(27 70% 22%), hsl(28 66% 16%));
+    --gradient-contact: linear-gradient(to bottom, hsl(28 58% 19%), hsl(28 58% 16%));
     
     /* Oddělovací linky */
     --divider-light: hsl(45 40% 75% / 0.4);

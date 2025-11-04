@@ -25,33 +25,33 @@ export const Contact = () => {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-[1fr,auto,auto] gap-y-4 gap-x-6 items-center">
-                <span style={{ color: 'hsl(var(--contact-accent-text))' }}>Pondělí</span>
+                <span style={{ color: 'hsl(var(--contact-secondary-text))' }}>Pondělí</span>
                 <span className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>Zavřeno</span>
                 <span></span>
                 
-                <span style={{ color: 'hsl(var(--contact-accent-text))' }}>Úterý</span>
+                <span style={{ color: 'hsl(var(--contact-secondary-text))' }}>Úterý</span>
                 <span className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>16:00 - 21:00</span>
-                <span className="text-sm" style={{ color: 'hsl(var(--contact-accent-text))' }}>muži</span>
+                <span className="text-sm" style={{ color: 'hsl(var(--contact-secondary-text))' }}>muži</span>
                 
-                <span style={{ color: 'hsl(var(--contact-accent-text))' }}>Středa</span>
+                <span style={{ color: 'hsl(var(--contact-secondary-text))' }}>Středa</span>
                 <span className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>16:00 - 21:00</span>
-                <span className="text-sm" style={{ color: 'hsl(var(--contact-accent-text))' }}>ženy</span>
+                <span className="text-sm" style={{ color: 'hsl(var(--contact-secondary-text))' }}>ženy</span>
                 
-                <span style={{ color: 'hsl(var(--contact-accent-text))' }}>Čtvrtek</span>
+                <span style={{ color: 'hsl(var(--contact-secondary-text))' }}>Čtvrtek</span>
                 <span className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>16:00 - 21:00</span>
-                <span className="text-sm" style={{ color: 'hsl(var(--contact-accent-text))' }}>společná</span>
+                <span className="text-sm" style={{ color: 'hsl(var(--contact-secondary-text))' }}>společná</span>
                 
-                <span style={{ color: 'hsl(var(--contact-accent-text))' }}>Pátek</span>
+                <span style={{ color: 'hsl(var(--contact-secondary-text))' }}>Pátek</span>
                 <span className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>16:00 - 21:00</span>
-                <span className="text-sm" style={{ color: 'hsl(var(--contact-accent-text))' }}>společná</span>
+                <span className="text-sm" style={{ color: 'hsl(var(--contact-secondary-text))' }}>společná</span>
                 
-                <span style={{ color: 'hsl(var(--contact-accent-text))' }}>Sobota</span>
+                <span style={{ color: 'hsl(var(--contact-secondary-text))' }}>Sobota</span>
                 <span className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>15:00 - 20:00</span>
-                <span className="text-sm" style={{ color: 'hsl(var(--contact-accent-text))' }}>společná</span>
+                <span className="text-sm" style={{ color: 'hsl(var(--contact-secondary-text))' }}>společná</span>
                 
-                <span style={{ color: 'hsl(var(--contact-accent-text))' }}>Neděle</span>
+                <span style={{ color: 'hsl(var(--contact-secondary-text))' }}>Neděle</span>
                 <span className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>15:00 - 20:00</span>
-                <span className="text-sm" style={{ color: 'hsl(var(--contact-accent-text))' }}>společná</span>
+                <span className="text-sm" style={{ color: 'hsl(var(--contact-secondary-text))' }}>společná</span>
               </div>
             </CardContent>
           </Card>
@@ -66,24 +66,24 @@ export const Contact = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--contact-accent-text))' }} />
+                <MapPin className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--contact-icon))' }} />
                 <div>
-                  <p className="mb-1" style={{ color: 'hsl(var(--contact-accent-text))' }}>Adresa</p>
-                  <p className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>Lipová alej 4110/23, Hodonín</p>
+                  <p className="mb-1" style={{ color: 'hsl(var(--contact-secondary-text))' }}>Adresa</p>
+                  <p className="font-medium" style={{ color: 'hsl(var(--contact-accent))' }}>Lipová alej 4110/23, Hodonín</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--contact-accent-text))' }} />
+                <Phone className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--contact-icon))' }} />
                 <div>
-                  <p className="mb-1" style={{ color: 'hsl(var(--contact-accent-text))' }}>Telefon</p>
-                  <p className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>+420 737 443 674</p>
+                  <p className="mb-1" style={{ color: 'hsl(var(--contact-secondary-text))' }}>Telefon</p>
+                  <p className="font-medium" style={{ color: 'hsl(var(--contact-accent))' }}>+420 737 443 674</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--contact-accent-text))' }} />
+                <Mail className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: 'hsl(var(--contact-icon))' }} />
                 <div>
-                  <p className="mb-1" style={{ color: 'hsl(var(--contact-accent-text))' }}>Email</p>
-                  <p className="font-medium" style={{ color: 'hsl(var(--contact-main-text))' }}>janasportmasaz@seznam.cz</p>
+                  <p className="mb-1" style={{ color: 'hsl(var(--contact-secondary-text))' }}>Email</p>
+                  <p className="font-medium" style={{ color: 'hsl(var(--contact-accent))' }}>janasportmasaz@seznam.cz</p>
                 </div>
               </div>
               <div className="pt-4">
