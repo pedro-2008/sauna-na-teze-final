@@ -16,9 +16,7 @@ export const About = () => {
               Teplo, ticho a vůně dřeva
             </h2>
             <p className="text-lg mb-6 leading-relaxed" style={{ color: 'hsl(var(--about-main-text))' }}>
-              Sauna Na Teze přináší autentický finský zážitek do Hodonína. 
-              Naše sauna je postavena podle tradičních finských postupů 
-              s použitím kvalitního severského dřeva.
+              Ticho, teplo a klid.
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
