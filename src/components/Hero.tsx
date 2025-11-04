@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import heroImage from "@/assets/sauna-hero.jpg";
 export const Hero = () => {
-  return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-      background: 'linear-gradient(to top, #4B2E14, #6B4420)'
-    }}>
+  return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: `url(${heroImage})`
@@ -12,10 +10,8 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
       </div>
       
-      {/* Subtle separator shadow */}
-      <div className="absolute bottom-0 left-0 right-0 h-px" style={{
-        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)'
-      }} />
+      {/* Oddělovací linka na spodku */}
+      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(30_35%_36%/0.4)] to-transparent" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

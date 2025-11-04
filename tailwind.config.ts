@@ -80,7 +80,10 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-warm': 'var(--gradient-warm)'
+				'gradient-about': 'var(--gradient-about)',
+				'gradient-services': 'var(--gradient-services)',
+				'gradient-pricing': 'var(--gradient-pricing)',
+				'gradient-contact': 'var(--gradient-contact)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

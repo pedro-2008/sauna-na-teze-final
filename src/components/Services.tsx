@@ -54,10 +54,9 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section id="services" ref={ref} className="py-24 px-6" style={{
-      background: 'linear-gradient(to bottom, #E3CDA4, #E8D5B6)',
-      boxShadow: '0 -10px 30px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.05)'
-    }}>
+    <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services">
+      {/* Oddělovací linka na spodku */}
+      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(45_40%_75%/0.4)] to-transparent" />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-12 text-primary">Naše služby</h2>

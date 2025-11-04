@@ -44,9 +44,16 @@ Updated: Nová teplá dřevěná barevná paleta
     --cream: 30 33% 96%;
     --eco-green: 105 9% 50%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(27 47% 37% / 0.1), hsl(28 58% 19% / 0.05));
-    --gradient-warm: linear-gradient(45deg, hsl(27 47% 37%), hsl(39 52% 77%));
+    /* Gradients - sekce */
+    --gradient-hero: linear-gradient(to top, hsl(27 70% 22%), hsl(27 53% 27%));
+    --gradient-about: linear-gradient(to bottom, hsl(30 33% 96%), hsl(35 45% 91%));
+    --gradient-services: linear-gradient(to bottom, hsl(39 52% 77%), hsl(40 48% 81%));
+    --gradient-pricing: linear-gradient(to bottom, hsl(0 0% 100%), hsl(30 33% 96%));
+    --gradient-contact: linear-gradient(to bottom, hsl(27 70% 22%), hsl(28 66% 16%));
+    
+    /* Oddělovací linky */
+    --divider-light: hsl(45 40% 75% / 0.4);
+    --divider-dark: hsl(30 35% 36% / 0.4);
     
     /* Shadows */
     --shadow-soft: 0 4px 20px hsl(28 58% 19% / 0.08);
