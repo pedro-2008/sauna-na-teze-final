@@ -10,8 +10,8 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
       </div>
       
-      {/* Oddělovací linka na spodku */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(30_35%_36%/0.4)] to-transparent" />
+      {/* Oddělovací linka mezi tmavou Hero a světlou About */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

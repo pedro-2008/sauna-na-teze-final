@@ -7,8 +7,8 @@ export const Pricing = () => {
   
   return (
     <section id="pricing" ref={ref} className="py-24 px-6 relative bg-gradient-pricing">
-      {/* Oddělovací linka na spodku */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(45_40%_75%/0.4)] to-transparent" />
+      {/* Oddělovací linka mezi světlou Pricing a tmavou Contact */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
