@@ -1,4 +1,4 @@
-import { Facebook, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -98,17 +98,6 @@ export const Contact = () => {
                   <p className="mb-1" style={{ color: 'hsl(var(--contact-card-secondary))' }}>Email</p>
                   <p className="font-medium" style={{ color: 'hsl(var(--contact-card-accent))' }}>janasportmasaz@seznam.cz</p>
                 </div>
-              </div>
-              <div className="pt-4">
-                <a 
-                  href="https://www.facebook.com/profile.php?id=61582524922922" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full py-4 px-6 bg-[#1877F2] hover:bg-[#166FE5] text-white rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  <Facebook className="w-6 h-6" />
-                  <span className="font-semibold text-lg">Navštivte nás na Facebooku</span>
-                </a>
               </div>
             </CardContent>
           </Card>
