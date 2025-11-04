@@ -57,8 +57,8 @@ export const Services = () => {
     <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-12 text-primary">Naše služby</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-light mb-12" style={{ color: 'hsl(var(--services-heading))' }}>Naše služby</h2>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--services-main-text))' }}>
             Finská sauna, vířivé vany a masážní služby
           </p>
         </div>
@@ -79,20 +79,20 @@ export const Services = () => {
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
                     <div className="p-2 bg-accent/10 rounded-lg">
-                      <Icon className="w-6 h-6 text-primary" />
+                      <Icon className="w-6 h-6" style={{ color: 'hsl(var(--services-heading))' }} />
                     </div>
-                    <CardTitle className="text-xl text-primary">{service.title}</CardTitle>
+                    <CardTitle className="text-xl" style={{ color: 'hsl(var(--services-heading))' }}>{service.title}</CardTitle>
                   </div>
-                  <div className="text-2xl font-semibold text-eco-green mt-2">{service.price}</div>
+                  <div className="text-2xl font-semibold mt-2" style={{ color: 'hsl(var(--services-accent-text))' }}>{service.price}</div>
                 </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="mb-6 leading-relaxed" style={{ color: 'hsl(var(--services-main-text))' }}>
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-eco-green mr-3" />
+                    <li key={featureIndex} className="flex items-center text-sm" style={{ color: 'hsl(var(--services-main-text))' }}>
+                      <div className="w-1.5 h-1.5 rounded-full mr-3" style={{ backgroundColor: 'hsl(var(--services-accent-text))' }} />
                       {feature}
                     </li>
                   ))}
