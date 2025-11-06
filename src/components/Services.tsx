@@ -50,7 +50,7 @@ export const Services = () => {
     title: "Vířivé vany",
     price: "30 min 250 Kč / 60 min 500 Kč",
     description: "Relaxace ve vířivých vanách s hydromasážními tryskami pro úplné uvolnění.",
-    features: ["Hydromasážní trysky", "Regulace teploty", "10-20 minut"],
+    features: ["Hydromasážní trysky", "Regulace teploty", "30/60 minut"],
     icon: Waves
   }];
   return (
