@@ -6,10 +6,7 @@ export const Gallery = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section id="gallery" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-services">
-      {/* Oddělovací linka */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
-      
+    <section id="gallery" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-gallery">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
