@@ -7,8 +7,6 @@ export const About = () => {
     isVisible
   } = useScrollAnimation();
   return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-about">
-      {/* Oddělovací linka mezi světlými sekcemi About a Services */}
-      <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(216, 199, 170, 0.35)' }} />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
