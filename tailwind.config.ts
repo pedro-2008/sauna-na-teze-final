@@ -78,13 +78,14 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			backgroundImage: {
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-about': 'var(--gradient-about)',
-				'gradient-services': 'var(--gradient-services)',
-				'gradient-pricing': 'var(--gradient-pricing)',
-				'gradient-contact': 'var(--gradient-contact)'
-			},
+		backgroundImage: {
+			'gradient-hero': 'var(--gradient-hero)',
+			'gradient-about': 'var(--gradient-about)',
+			'gradient-gallery': 'var(--gradient-gallery)',
+			'gradient-services': 'var(--gradient-services)',
+			'gradient-pricing': 'var(--gradient-pricing)',
+			'gradient-contact': 'var(--gradient-contact)'
+		},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'warm': 'var(--shadow-warm)'
