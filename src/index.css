@@ -60,8 +60,11 @@ Updated: Nová teplá dřevěná barevná paleta
     
     /* Services Text Colors */
     --services-heading: 28 58% 19%;
-    --services-main-text: 27 35% 17%;
-    --services-accent-text: 28 52% 27%;
+    --services-main-text: 28 58% 19%;
+    --services-accent-text: 27 37% 33%;
+    --services-card-bg: 0 0% 100%;
+    --services-section-heading: 30 33% 96%;
+    --services-section-text: 30 33% 96%;
     
     /* Pricing Text Colors */
     --pricing-heading: 27 58% 15%;
@@ -96,7 +99,7 @@ Updated: Nová teplá dřevěná barevná paleta
     --gradient-hero: linear-gradient(to top, hsl(27 70% 22%), hsl(27 53% 27%));
     --gradient-about: linear-gradient(to bottom, hsl(30 33% 96%), hsl(35 45% 91%));
     --gradient-gallery: linear-gradient(to bottom, hsl(35 37% 75%), hsl(35 37% 75%));
-    --gradient-services: linear-gradient(to bottom, hsl(35 37% 75%), hsl(35 37% 75%));
+    --gradient-services: linear-gradient(to bottom, hsl(27 29% 42%), hsl(27 29% 42%));
     --gradient-pricing: linear-gradient(to bottom, hsl(0 0% 100%), hsl(30 33% 96%));
     --gradient-contact: linear-gradient(to bottom, hsl(28 58% 19%), hsl(28 58% 16%));
     
