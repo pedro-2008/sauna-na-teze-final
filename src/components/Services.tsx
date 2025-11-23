@@ -57,8 +57,8 @@ export const Services = () => {
     <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-12" style={{ color: 'hsl(var(--services-heading))' }}>Naše služby</h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--services-main-text))' }}>
+          <h2 className="text-4xl md:text-5xl font-light mb-12" style={{ color: 'hsl(var(--services-section-heading))' }}>Naše služby</h2>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--services-section-text))' }}>
             Finská sauna, vířivé vany a masážní služby
           </p>
         </div>
@@ -69,10 +69,11 @@ export const Services = () => {
             return (
               <Card 
                 key={index} 
-                className={`bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-2 rounded-[20px] ${
+                className={`shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-2 rounded-[20px] ${
                   isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                 }`}
                 style={{ 
+                  backgroundColor: 'hsl(var(--services-card-bg))',
                   transitionDelay: `${index * 100}ms`
                 }}
               >
