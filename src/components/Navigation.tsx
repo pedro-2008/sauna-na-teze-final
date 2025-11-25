@@ -32,21 +32,24 @@ export const Navigation = () => {
 
   return (
     <nav 
-      className="fixed top-0 left-0 right-0 z-50" 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "backdrop-blur-sm" 
+          : ""
+      }`}
       style={{ 
-        backgroundColor: 'hsl(var(--nav-bg))',
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
+        backgroundColor: isScrolled ? 'hsl(var(--nav-bg))' : 'transparent',
+        boxShadow: isScrolled ? '0 2px 8px rgba(0, 0, 0, 0.08)' : 'none'
       }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-light transition-[color]"
+            className="text-2xl font-light transition-all duration-300"
             style={{ 
-              color: 'hsl(var(--nav-text))',
-              transitionDuration: '0.2s',
-              transitionTimingFunction: 'ease'
+              color: isScrolled ? 'hsl(var(--nav-text))' : 'hsl(var(--hero-heading))',
+              textShadow: isScrolled ? 'none' : '0 2px 4px rgba(0,0,0,0.3)'
             }}
           >
             Sauna Na Teze
@@ -58,29 +61,36 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-medium transition-[color]"
+                className="font-medium transition-all duration-300"
                 style={{ 
-                  color: 'hsl(var(--nav-text))',
-                  transitionDuration: '0.2s',
-                  transitionTimingFunction: 'ease'
+                  color: isScrolled ? 'hsl(var(--nav-text))' : 'hsl(var(--hero-heading))',
+                  textShadow: isScrolled ? 'none' : '0 1px 3px rgba(0,0,0,0.3)'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--nav-hover))'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--nav-text))'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = isScrolled ? 'hsl(var(--nav-hover))' : 'hsl(var(--secondary))';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = isScrolled ? 'hsl(var(--nav-text))' : 'hsl(var(--hero-heading))';
+                }}
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection("contact")}
-              className="font-medium px-6 py-2 rounded-md transition-[background-color]"
+              className="font-medium px-6 py-2 rounded-md transition-all duration-300"
               style={{ 
-                backgroundColor: 'hsl(var(--nav-button-bg))',
-                color: 'hsl(var(--nav-button-text))',
-                transitionDuration: '0.2s',
-                transitionTimingFunction: 'ease'
+                backgroundColor: isScrolled ? 'hsl(var(--nav-button-bg))' : 'hsla(0, 0%, 100%, 0.15)',
+                color: isScrolled ? 'hsl(var(--nav-button-text))' : 'hsl(var(--hero-heading))',
+                backdropFilter: isScrolled ? 'none' : 'blur(8px)',
+                border: isScrolled ? 'none' : '1px solid hsla(0, 0%, 100%, 0.2)'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(var(--nav-button-hover))'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(var(--nav-button-bg))'}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = isScrolled ? 'hsl(var(--nav-button-hover))' : 'hsla(0, 0%, 100%, 0.25)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = isScrolled ? 'hsl(var(--nav-button-bg))' : 'hsla(0, 0%, 100%, 0.15)';
+              }}
             >
               Kontakt
             </button>
@@ -92,7 +102,10 @@ export const Navigation = () => {
             size="icon"
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            style={{ color: 'hsl(var(--nav-text))' }}
+            style={{ 
+              color: isScrolled ? 'hsl(var(--nav-text))' : 'hsl(var(--hero-heading))',
+              textShadow: isScrolled ? 'none' : '0 1px 3px rgba(0,0,0,0.3)'
+            }}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
@@ -100,19 +113,27 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3">
+          <div 
+            className="md:hidden mt-4 pb-4 space-y-3 rounded-lg px-4 py-2"
+            style={{
+              backgroundColor: isScrolled ? 'transparent' : 'hsla(0, 0%, 0%, 0.3)',
+              backdropFilter: isScrolled ? 'none' : 'blur(8px)'
+            }}
+          >
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 font-medium transition-[color]"
+                className="block w-full text-left py-2 font-medium transition-all duration-300"
                 style={{ 
-                  color: 'hsl(var(--nav-text))',
-                  transitionDuration: '0.2s',
-                  transitionTimingFunction: 'ease'
+                  color: isScrolled ? 'hsl(var(--nav-text))' : 'hsl(var(--hero-heading))'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--nav-hover))'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--nav-text))'}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = isScrolled ? 'hsl(var(--nav-hover))' : 'hsl(var(--secondary))';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = isScrolled ? 'hsl(var(--nav-text))' : 'hsl(var(--hero-heading))';
+                }}
               >
                 {item.label}
               </button>
