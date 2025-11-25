@@ -84,11 +84,16 @@ export default {
 			'gradient-gallery': 'var(--gradient-gallery)',
 			'gradient-services': 'var(--gradient-services)',
 			'gradient-pricing': 'var(--gradient-pricing)',
-			'gradient-contact': 'var(--gradient-contact)'
+			'gradient-contact': 'var(--gradient-contact)',
+			'gradient-glow-warm': 'var(--gradient-glow-warm)',
+			'gradient-glow-gold': 'var(--gradient-glow-gold)'
 		},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
-				'warm': 'var(--shadow-warm)'
+				'warm': 'var(--shadow-warm)',
+				'glow': 'var(--shadow-glow)',
+				'elevated': 'var(--shadow-elevated)',
+				'card-hover': 'var(--shadow-card-hover)'
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
