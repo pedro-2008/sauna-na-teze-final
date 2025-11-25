@@ -6,7 +6,7 @@ export const Pricing = () => {
   const { ref, isVisible } = useScrollAnimation();
   
   return (
-    <section id="pricing" ref={ref} className="py-24 px-6 relative bg-gradient-pricing">
+    <section id="pricing" ref={ref} className="py-24 px-6 relative bg-gradient-pricing texture-noise">
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
