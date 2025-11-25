@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import heroImage from "@/assets/sauna-hero.jpg";
+import { SteamParticles } from "./SteamParticles";
+
 export const Hero = () => {
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Image */}
@@ -9,6 +11,9 @@ export const Hero = () => {
     }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
       </div>
+      
+      {/* Steam Particles */}
+      <SteamParticles />
       
       {/* Oddělovací linka mezi tmavou Hero a světlou About */}
       <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
