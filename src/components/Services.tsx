@@ -54,7 +54,7 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services bg-noise">
+    <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-12" style={{ color: 'hsl(var(--services-section-heading))' }}>Naše služby</h2>
@@ -69,7 +69,7 @@ export const Services = () => {
             return (
               <Card 
                 key={index} 
-                className={`shadow-elevated hover:shadow-card-hover transition-all duration-500 hover:scale-105 hover:-translate-y-3 rounded-[20px] ${
+                className={`shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-2 rounded-[20px] ${
                   isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                 }`}
                 style={{ 
