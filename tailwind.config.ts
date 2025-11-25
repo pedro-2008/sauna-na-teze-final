@@ -62,14 +62,6 @@ export default {
 				eco: {
 					green: 'hsl(var(--eco-green))'
 				},
-				nav: {
-					bg: 'hsl(var(--nav-bg))',
-					text: 'hsl(var(--nav-text))',
-					hover: 'hsl(var(--nav-hover))',
-					'button-bg': 'hsl(var(--nav-button-bg))',
-					'button-text': 'hsl(var(--nav-button-text))',
-					'button-hover': 'hsl(var(--nav-button-hover))'
-				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

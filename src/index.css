@@ -111,11 +111,6 @@ Updated: Nová teplá dřevěná barevná paleta
     --shadow-soft: 0 4px 20px hsl(28 58% 19% / 0.08);
     --shadow-warm: 0 8px 30px hsl(27 47% 37% / 0.15);
 
-    /* Glass morphism */
-    --glass-bg: 0 0% 100% / 0.7;
-    --glass-border: 0 0% 100% / 0.3;
-    --glass-shadow: 0 8px 32px hsl(28 58% 19% / 0.1);
-
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
