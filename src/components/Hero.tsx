@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
-import heroImage from "@/assets/nase-sauna.jpg";
+import heroImage from "@/assets/sauna-hero.jpg";
 import { SteamParticles } from "./SteamParticles";
 
 export const Hero = () => {
