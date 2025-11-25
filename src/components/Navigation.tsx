@@ -5,15 +5,20 @@ import { Button } from "@/components/ui/button";
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Calculate scroll progress
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / scrollHeight) * 100;
+      setScrollProgress(progress);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -31,23 +36,29 @@ export const Navigation = () => {
   ];
 
   return (
-    <nav 
-      className="fixed top-0 left-0 right-0 z-50" 
-      style={{ 
-        backgroundColor: 'hsl(var(--nav-bg))',
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)'
-      }}
-    >
+    <>
+      {/* Progress Bar */}
+      <div className="fixed top-0 left-0 right-0 z-[60] h-1 bg-transparent">
+        <div 
+          className="h-full bg-gradient-to-r from-primary to-secondary transition-all duration-150"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
+      
+      <nav 
+        className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-nav-bg/95 backdrop-blur-md shadow-lg' 
+            : 'bg-transparent backdrop-blur-sm'
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-light transition-[color]"
-            style={{ 
-              color: 'hsl(var(--nav-text))',
-              transitionDuration: '0.2s',
-              transitionTimingFunction: 'ease'
-            }}
+            className={`text-2xl font-light transition-all duration-300 ${
+              isScrolled ? 'text-nav-text' : 'text-white'
+            }`}
           >
             Sauna Na Teze
           </button>
@@ -58,29 +69,20 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-medium transition-[color]"
-                style={{ 
-                  color: 'hsl(var(--nav-text))',
-                  transitionDuration: '0.2s',
-                  transitionTimingFunction: 'ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--nav-hover))'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--nav-text))'}
+                className={`font-medium transition-all duration-300 hover:opacity-80 ${
+                  isScrolled ? 'text-nav-text' : 'text-white/90'
+                }`}
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection("contact")}
-              className="font-medium px-6 py-2 rounded-md transition-[background-color]"
-              style={{ 
-                backgroundColor: 'hsl(var(--nav-button-bg))',
-                color: 'hsl(var(--nav-button-text))',
-                transitionDuration: '0.2s',
-                transitionTimingFunction: 'ease'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(var(--nav-button-hover))'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(var(--nav-button-bg))'}
+              className={`font-medium px-6 py-2 rounded-md transition-all duration-300 ${
+                isScrolled 
+                  ? 'bg-nav-button-bg text-nav-button-text hover:bg-nav-button-hover' 
+                  : 'bg-white/20 text-white backdrop-blur-sm hover:bg-white/30'
+              }`}
             >
               Kontakt
             </button>
@@ -90,9 +92,10 @@ export const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className={`md:hidden transition-colors duration-300 ${
+              isScrolled ? 'text-nav-text' : 'text-white'
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            style={{ color: 'hsl(var(--nav-text))' }}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
@@ -100,19 +103,16 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3">
+          <div className={`md:hidden mt-4 pb-4 space-y-3 ${
+            isScrolled ? '' : 'bg-black/20 backdrop-blur-md rounded-lg p-4 -mx-2'
+          }`}>
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 font-medium transition-[color]"
-                style={{ 
-                  color: 'hsl(var(--nav-text))',
-                  transitionDuration: '0.2s',
-                  transitionTimingFunction: 'ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(var(--nav-hover))'}
-                onMouseLeave={(e) => e.currentTarget.style.color = 'hsl(var(--nav-text))'}
+                className={`block w-full text-left py-2 font-medium transition-colors duration-300 ${
+                  isScrolled ? 'text-nav-text hover:text-nav-hover' : 'text-white/90 hover:text-white'
+                }`}
               >
                 {item.label}
               </button>
@@ -120,6 +120,7 @@ export const Navigation = () => {
           </div>
         )}
       </div>
-    </nav>
+      </nav>
+    </>
   );
 };
