@@ -99,13 +99,15 @@ Updated: Nová teplá dřevěná barevná paleta
     --gradient-hero: linear-gradient(135deg, hsl(27 70% 18%) 0%, hsl(27 55% 25%) 50%, hsl(30 45% 30%) 100%);
     --gradient-about: linear-gradient(180deg, hsl(30 33% 97%) 0%, hsl(35 40% 93%) 50%, hsl(38 45% 88%) 100%);
     --gradient-gallery: linear-gradient(180deg, hsl(35 40% 78%) 0%, hsl(33 35% 72%) 50%, hsl(30 32% 68%) 100%);
-    --gradient-services: linear-gradient(180deg, hsl(27 32% 45%) 0%, hsl(27 28% 40%) 50%, hsl(28 25% 36%) 100%);
+    --gradient-services: linear-gradient(180deg, hsl(25 35% 32%) 0%, hsl(24 32% 28%) 50%, hsl(23 30% 24%) 100%);
     --gradient-pricing: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(32 35% 97%) 50%, hsl(30 33% 94%) 100%);
     --gradient-contact: linear-gradient(180deg, hsl(28 58% 19%) 0%, hsl(28 55% 16%) 50%, hsl(28 50% 13%) 100%);
     
     /* Radiální gradienty pro efekty */
     --gradient-glow-warm: radial-gradient(ellipse at center, hsl(35 60% 50% / 0.15) 0%, transparent 70%);
     --gradient-glow-gold: radial-gradient(ellipse at center, hsl(40 70% 55% / 0.2) 0%, transparent 60%);
+    --gradient-glow-soft: radial-gradient(ellipse at 30% 50%, hsl(35 50% 60% / 0.12) 0%, transparent 50%);
+    --gradient-glow-contact: radial-gradient(ellipse at 70% 30%, hsl(35 60% 45% / 0.25) 0%, transparent 60%);
     
     /* Oddělovací linky */
     --divider-light: hsl(45 40% 75% / 0.4);
@@ -220,4 +222,60 @@ Updated: Nová teplá dřevěná barevná paleta
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Background effect utilities */
+.bg-noise {
+  position: relative;
+}
+
+.bg-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-glow-warm::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-glow-warm);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-glow-soft::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-glow-soft);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-glow-contact::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-glow-contact);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-pattern-dots {
+  position: relative;
+}
+
+.bg-pattern-dots::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, hsl(27 47% 37% / 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 1;
 }

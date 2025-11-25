@@ -54,7 +54,7 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services">
+    <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services bg-noise">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-12" style={{ color: 'hsl(var(--services-section-heading))' }}>Naše služby</h2>
