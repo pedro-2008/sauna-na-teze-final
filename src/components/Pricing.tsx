@@ -17,7 +17,7 @@ export const Pricing = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Jednorázový vstup */}
-            <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
+            <Card variant="glass" className="shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
               <CardHeader>
                 <CardTitle className="text-2xl" style={{ color: 'hsl(var(--pricing-heading))' }}>Jednorázový vstup</CardTitle>
               </CardHeader>
@@ -49,7 +49,7 @@ export const Pricing = () => {
             </Card>
 
             {/* Permanentky */}
-            <Card className="bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
+            <Card variant="glass" className="shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px]">
               <CardHeader>
                 <CardTitle className="text-2xl" style={{ color: 'hsl(var(--pricing-heading))' }}>Permanentky</CardTitle>
               </CardHeader>
