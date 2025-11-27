@@ -4,45 +4,49 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="relative overflow-hidden" style={{ backgroundColor: 'hsl(25 40% 12%)' }}>
-      <div className="h-1 bg-gradient-to-r from-transparent via-luxury-gold/50 to-transparent" />
-      
-      <div className="container mx-auto px-6 py-16">
+    <footer className="relative overflow-hidden py-20" style={{ backgroundColor: 'hsl(25 40% 12%)' }}>
+      <div className="container mx-auto px-6">
         <div className="flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="p-3 bg-luxury-gold/15 rounded-xl">
-              <Flame className="w-8 h-8 text-luxury-gold" />
+          {/* Logo and Title */}
+          <div className="flex items-center gap-4 mb-8">
+            <div className="p-3 rounded-2xl" style={{ backgroundColor: 'rgba(218, 165, 83, 0.15)' }}>
+              <Flame className="w-7 h-7" style={{ color: '#DAA553' }} />
             </div>
-            <span className="font-display text-3xl font-medium text-white">
+            <span className="text-3xl font-light text-white" style={{ fontFamily: 'serif' }}>
               Sauna Na Teze
             </span>
           </div>
           
-          <p className="text-white/60 text-center mb-10 max-w-md font-light">
+          {/* Description */}
+          <p className="text-white/60 text-center mb-12 max-w-xl font-light text-base leading-relaxed">
             Autentická finská sauna v srdci Hodonína. Relaxace, regenerace a pohoda pro tělo i duši.
           </p>
           
-          <div className="flex items-center gap-4 mb-12">
+          {/* Facebook Button */}
+          <div className="mb-12">
             <a 
               href="https://www.facebook.com/profile.php?id=61582524922922" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-3 bg-[#1877F2]/10 hover:bg-[#1877F2] text-white rounded-full transition-all duration-300 hover:scale-105 border border-[#1877F2]/30 hover:border-[#1877F2]"
+              className="flex items-center gap-3 px-8 py-3 bg-transparent hover:bg-white/5 text-white rounded-full transition-all duration-300 border border-white/20 hover:border-white/30"
             >
               <Facebook className="w-5 h-5" />
-              <span className="font-medium">Facebook</span>
+              <span className="font-normal">Facebook</span>
             </a>
           </div>
           
-          <div className="flex items-center gap-4 w-full max-w-xs mb-8">
-            <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent to-luxury-gold/30" />
-            <div className="w-2 h-2 rotate-45 border border-luxury-gold/40" />
-            <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent to-luxury-gold/30" />
+          {/* Decorative Divider */}
+          <div className="flex items-center gap-4 w-full max-w-md mb-10">
+            <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to right, transparent, rgba(218, 165, 83, 0.3))' }} />
+            <div className="w-2 h-2 rotate-45 border" style={{ borderColor: 'rgba(218, 165, 83, 0.4)' }} />
+            <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to left, transparent, rgba(218, 165, 83, 0.3))' }} />
           </div>
           
-          <p className="text-white/50 text-sm flex items-center gap-2 justify-center">
+          {/* Copyright */}
+          <p className="text-white/40 text-sm flex items-center gap-2 justify-center">
             © {currentYear} Sauna Na Teze. Vytvořeno s 
-            <Heart className="w-4 h-4 text-red-400 animate-pulse" />
+            <Heart className="w-4 h-4 text-red-400 fill-red-400" />
+            v Hodoníně.
           </p>
         </div>
       </div>
