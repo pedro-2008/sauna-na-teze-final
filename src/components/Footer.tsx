@@ -5,9 +5,6 @@ export const Footer = () => {
   
   return (
     <footer className="relative overflow-hidden py-20" style={{ backgroundColor: 'hsl(25 40% 12%)' }}>
-      {/* Top glow effect */}
-      <div className="absolute top-0 left-0 right-0 h-[1px]" style={{ background: 'linear-gradient(to right, transparent, rgba(218, 165, 83, 0.5) 50%, transparent)' }} />
-      
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center">
           {/* Logo and Title */}
@@ -38,10 +35,14 @@ export const Footer = () => {
             </a>
           </div>
           
-          {/* Decorative Divider */}
-          <div className="flex items-center gap-4 w-full max-w-md mb-10">
+          {/* Decorative Divider with Glow */}
+          <div className="relative flex items-center gap-4 w-full max-w-md mb-10">
             <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to right, transparent, rgba(218, 165, 83, 0.3))' }} />
-            <div className="w-2 h-2 rotate-45 border" style={{ borderColor: 'rgba(218, 165, 83, 0.4)' }} />
+            <div className="relative">
+              {/* Glow effect behind diamond */}
+              <div className="absolute inset-0 blur-xl" style={{ backgroundColor: 'rgba(218, 165, 83, 0.3)', transform: 'scale(2)' }} />
+              <div className="relative w-2 h-2 rotate-45 border" style={{ borderColor: 'rgba(218, 165, 83, 0.6)' }} />
+            </div>
             <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to left, transparent, rgba(218, 165, 83, 0.3))' }} />
           </div>
           
