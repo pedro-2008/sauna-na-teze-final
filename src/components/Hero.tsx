@@ -39,7 +39,7 @@ export const Hero = () => {
             });
           }
         }}>
-            Více informací
+            Přijďte se ohřát
           </Button>
         </div>
       </div>
