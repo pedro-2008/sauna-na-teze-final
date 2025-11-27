@@ -13,6 +13,9 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
       </div>
       
+      {/* Tenký rámeček kolem celé obrazovky */}
+      <div className="absolute inset-4 border border-[rgba(218,165,83,0.3)] pointer-events-none z-20" />
+      
       {/* Steam Particles */}
       <SteamParticles />
       
@@ -20,7 +23,7 @@ export const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto border border-[rgba(218,165,83,0.25)] rounded-lg p-12 backdrop-blur-sm">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-light mb-6 tracking-wide animate-fade-in animate-float" style={{ color: 'hsl(var(--hero-heading))' }}>
           Sauna Na Teze
         </h1>
