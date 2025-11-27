@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
 import heroImage from "@/assets/sauna-hero.jpg";
 import { SteamParticles } from "./SteamParticles";
+import { ChevronDown } from "lucide-react";
 
 export const Hero = () => {
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
@@ -19,7 +20,7 @@ export const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ backgroundColor: 'rgba(122, 91, 58, 0.35)' }} />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto border border-[rgba(218,165,83,0.25)] rounded-lg p-12 backdrop-blur-sm">
         <h1 className="text-5xl md:text-7xl font-light mb-6 tracking-wide animate-fade-in animate-float" style={{ color: 'hsl(var(--hero-heading))' }}>
           Sauna Na Teze
         </h1>
@@ -37,6 +38,18 @@ export const Hero = () => {
             Více informací
           </Button>
         </div>
+      </div>
+      
+      {/* Animated scroll arrow */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer" onClick={() => {
+        const aboutSection = document.querySelector('#about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      }}>
+        <ChevronDown className="w-8 h-8" style={{ color: 'hsl(var(--hero-accent-text))' }} />
       </div>
     </section>;
 };
