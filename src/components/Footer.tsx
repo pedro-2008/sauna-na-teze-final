@@ -5,6 +5,9 @@ export const Footer = () => {
   
   return (
     <footer className="relative overflow-hidden py-20" style={{ backgroundColor: 'hsl(25 40% 12%)' }}>
+      {/* Top glow effect */}
+      <div className="absolute top-0 left-0 right-0 h-[1px]" style={{ background: 'linear-gradient(to right, transparent, rgba(218, 165, 83, 0.5) 50%, transparent)' }} />
+      
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center">
           {/* Logo and Title */}
