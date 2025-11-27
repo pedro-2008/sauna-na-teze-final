@@ -13,8 +13,9 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
       </div>
       
-      {/* Tenký rámeček kolem celé obrazovky */}
-      <div className="absolute inset-4 border border-[rgba(218,165,83,0.3)] pointer-events-none z-20" />
+      {/* Decorative Frame Lines */}
+      <div className="absolute inset-8 md:inset-16 border border-white/10 pointer-events-none" />
+      <div className="absolute inset-12 md:inset-20 border border-white/5 pointer-events-none" />
       
       {/* Steam Particles */}
       <SteamParticles />
