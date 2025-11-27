@@ -8,10 +8,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center">
           {/* Logo and Title */}
-          <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 rounded-2xl" style={{ backgroundColor: 'rgba(218, 165, 83, 0.15)' }}>
-              <Flame className="w-7 h-7" style={{ color: '#DAA553' }} />
-            </div>
+          <div className="flex items-center justify-center mb-8">
             <span className="text-3xl font-light text-white" style={{ fontFamily: 'serif' }}>
               Sauna Na Teze
             </span>
