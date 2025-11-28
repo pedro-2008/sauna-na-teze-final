@@ -1,4 +1,4 @@
-import { Facebook, Heart, Flame } from "lucide-react";
+import { Facebook, Heart } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,10 +8,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center">
           {/* Logo and Title */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="p-3 rounded-xl" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>
-              <Flame className="w-6 h-6" style={{ color: '#DAA553' }} />
-            </div>
+          <div className="flex items-center justify-center mb-8">
             <span className="text-3xl font-light text-white" style={{ fontFamily: 'serif' }}>
               Sauna Na Teze
             </span>
@@ -52,15 +49,7 @@ export const Footer = () => {
       </div>
 
       {/* Zlatá záře uprostřed dole */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center">
-        <div
-          className="w-80 h-32"
-          style={{
-            background: 'radial-gradient(circle at center, rgba(218, 165, 83, 0.45), transparent 70%)',
-            filter: 'blur(24px)',
-          }}
-        />
-      </div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-luxury-gold/10 blur-3xl pointer-events-none" />
     </footer>
   );
 };
