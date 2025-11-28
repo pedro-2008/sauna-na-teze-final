@@ -50,6 +50,17 @@ export const Footer = () => {
           </p>
         </div>
       </div>
+
+      {/* Zlatá záře uprostřed dole */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center">
+        <div
+          className="w-80 h-32"
+          style={{
+            background: 'radial-gradient(circle at center, rgba(218, 165, 83, 0.45), transparent 70%)',
+            filter: 'blur(24px)',
+          }}
+        />
+      </div>
     </footer>
   );
 };
