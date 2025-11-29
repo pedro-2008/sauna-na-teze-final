@@ -1,55 +1,59 @@
-import { Facebook, Heart } from "lucide-react";
+import { Facebook, Heart, Flame } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="relative overflow-hidden py-20" style={{ backgroundColor: 'hsl(25 40% 12%)' }}>
-      <div className="container mx-auto px-6">
+    <footer className="relative overflow-hidden" style={{ backgroundColor: 'hsl(25 40% 12%)' }}>
+      {/* Top gradient line */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-amber-400/50 to-transparent" />
+      
+      <div className="container mx-auto px-6 py-16">
         <div className="flex flex-col items-center">
-          {/* Logo and Title */}
-          <div className="flex items-center justify-center mb-8">
-            <span className="text-3xl font-light text-white" style={{ fontFamily: 'serif' }}>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(39 68% 58% / 0.15)' }}>
+              <Flame className="w-8 h-8" style={{ color: 'hsl(39 68% 58%)' }} />
+            </div>
+            <span className="font-display text-3xl font-medium text-white">
               Sauna Na Teze
             </span>
           </div>
           
-          {/* Description */}
-          <p className="text-white/60 text-center mb-12 max-w-xl font-light text-base leading-relaxed">
+          <p className="text-white/60 text-center mb-10 max-w-md font-light">
             Autentická finská sauna v srdci Hodonína. Relaxace, regenerace a pohoda pro tělo i duši.
           </p>
           
-          {/* Facebook Button */}
-          <div className="mb-12">
+          <div className="flex items-center gap-4 mb-12">
             <a 
               href="https://www.facebook.com/profile.php?id=61582524922922" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-8 py-3 bg-transparent hover:bg-white/5 text-white rounded-full transition-all duration-300 border border-white/20 hover:border-white/30"
+              className="group flex items-center gap-3 px-6 py-3 bg-[#1877F2]/10 hover:bg-[#1877F2] text-white rounded-full transition-all duration-300 hover:scale-105 border border-[#1877F2]/30 hover:border-[#1877F2]"
             >
               <Facebook className="w-5 h-5" />
-              <span className="font-normal">Facebook</span>
+              <span className="font-medium">Facebook</span>
             </a>
           </div>
           
-          {/* Decorative Divider */}
-          <div className="relative flex items-center gap-4 w-full max-w-md mb-10">
-            <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to right, transparent, rgba(218, 165, 83, 0.3))' }} />
-            <div className="w-2 h-2 rotate-45 border" style={{ borderColor: 'rgba(218, 165, 83, 0.6)' }} />
-            <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to left, transparent, rgba(218, 165, 83, 0.3))' }} />
+          <div className="flex items-center gap-4 w-full max-w-xs mb-8">
+            <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to right, transparent, hsl(39 68% 58% / 0.3))' }} />
+            <div className="w-2 h-2 rotate-45 border" style={{ borderColor: 'hsl(39 68% 58% / 0.4)' }} />
+            <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(to left, transparent, hsl(39 68% 58% / 0.3))' }} />
           </div>
           
-          {/* Copyright */}
-          <p className="text-white/40 text-sm flex items-center gap-2 justify-center">
+          <p className="text-white/50 text-sm flex items-center gap-2 justify-center">
             © {currentYear} Sauna Na Teze. Vytvořeno s 
-            <Heart className="w-4 h-4 text-red-400 fill-red-400" />
+            <Heart className="w-4 h-4 text-red-400 animate-pulse" fill="currentColor" />
             v Hodoníně.
           </p>
         </div>
       </div>
-
-      {/* Zlatá záře uprostřed dole */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-luxury-gold/10 blur-3xl pointer-events-none" />
+      
+      {/* Bottom golden glow */}
+      <div 
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 blur-3xl pointer-events-none"
+        style={{ backgroundColor: 'hsl(39 68% 58% / 0.1)' }}
+      />
     </footer>
   );
 };
