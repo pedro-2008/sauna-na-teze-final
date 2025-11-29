@@ -6,8 +6,13 @@ export const About = () => {
     ref,
     isVisible
   } = useScrollAnimation();
-  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-about texture-linen">
-      <div className="max-w-6xl mx-auto">
+  return <section id="about" ref={ref} className="py-24 px-6 relative overflow-hidden bg-gradient-about">
+      {/* Subtle Pattern Overlay */}
+      <div className="absolute inset-0 opacity-[0.015]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }} />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h2 className="text-4xl md:text-5xl font-light mb-8" style={{ color: 'hsl(var(--about-heading))' }}>
