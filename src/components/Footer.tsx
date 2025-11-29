@@ -1,4 +1,4 @@
-import { Facebook, Heart, Flame } from "lucide-react";
+import { Facebook, Heart } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +10,7 @@ export const Footer = () => {
       
       <div className="container mx-auto px-6 py-16">
         <div className="flex flex-col items-center">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="p-3 rounded-xl" style={{ backgroundColor: 'hsl(39 68% 58% / 0.15)' }}>
-              <Flame className="w-8 h-8" style={{ color: 'hsl(39 68% 58%)' }} />
-            </div>
+          <div className="flex items-center justify-center mb-8">
             <span className="font-display text-3xl font-medium text-white">
               Sauna Na Teze
             </span>
