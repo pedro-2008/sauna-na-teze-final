@@ -31,11 +31,10 @@ export const ParallaxSeparator = () => {
           willChange: 'transform',
         }}
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${saunaInterior})`,
-          }}
+        <img
+          src={saunaInterior}
+          alt="Finská sauna interiér"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/30" />
