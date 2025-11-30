@@ -3,13 +3,30 @@ import { toast } from "@/hooks/use-toast";
 import heroImage from "@/assets/sauna-hero.jpg";
 import { SteamParticles } from "./SteamParticles";
 import { ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroImage})`
-    }}>
+      {/* Background Image with Parallax */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          transform: `translateY(${scrollY * 0.5}px)`,
+          willChange: 'transform'
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/50" />
       </div>
       
