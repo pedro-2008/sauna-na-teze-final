@@ -24,17 +24,15 @@ export const ParallaxSeparator = () => {
   return (
     <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
       {/* Parallax Background */}
-      <div
-        className="absolute inset-0 w-full h-[120%] -top-[10%]"
-        style={{
-          transform: `translateY(${scrollY * 0.4}px)`,
-          willChange: 'transform',
-        }}
-      >
+      <div className="absolute inset-0 overflow-hidden">
         <img
           src={saunaInterior}
           alt="Finská sauna interiér"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-full object-cover"
+          style={{
+            transform: `translateY(${scrollY * 0.3}px)`,
+            willChange: 'transform',
+          }}
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/30" />
