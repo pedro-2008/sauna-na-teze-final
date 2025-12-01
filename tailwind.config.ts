@@ -56,13 +56,9 @@ export default {
 				wood: {
 					warm: 'hsl(var(--wood-warm))',
 					light: 'hsl(var(--wood-light))',
-					dark: 'hsl(var(--wood-dark))',
-					accent: 'hsl(var(--wood-accent))'
+					dark: 'hsl(var(--wood-dark))'
 				},
-				cream: {
-					DEFAULT: 'hsl(var(--cream))',
-					light: 'hsl(var(--cream-light))'
-				},
+				cream: 'hsl(var(--cream))',
 				eco: {
 					green: 'hsl(var(--eco-green))'
 				},
@@ -88,8 +84,7 @@ export default {
 			'gradient-gallery': 'var(--gradient-gallery)',
 			'gradient-services': 'var(--gradient-services)',
 			'gradient-pricing': 'var(--gradient-pricing)',
-			'gradient-contact': 'var(--gradient-contact)',
-			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
+			'gradient-contact': 'var(--gradient-contact)'
 		},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',

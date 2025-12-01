@@ -54,15 +54,10 @@ export const Services = () => {
     icon: Waves
   }];
   return (
-    <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-radial from-wood-accent/5 to-transparent blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-radial from-cream/5 to-transparent blur-3xl pointer-events-none" />
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-4xl md:text-5xl font-light mb-6" style={{ color: 'hsl(var(--services-section-heading))' }}>Naše služby</h2>
-          <div className="w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-transparent via-wood-accent to-transparent" />
+    <section id="services" ref={ref} className="py-24 px-6 relative bg-gradient-services">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-light mb-12" style={{ color: 'hsl(var(--services-section-heading))' }}>Naše služby</h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: 'hsl(var(--services-section-text))' }}>
             Finská sauna, vířivé vany a masážní služby
           </p>
@@ -74,26 +69,22 @@ export const Services = () => {
             return (
               <Card 
                 key={index} 
-                className={`group shadow-soft hover:shadow-warm transition-all duration-700 hover:scale-105 hover:-translate-y-3 rounded-[24px] ${
+                className={`shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105 hover:-translate-y-2 rounded-[20px] ${
                   isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'
                 }`}
                 style={{ 
                   backgroundColor: 'hsl(var(--services-card-bg))',
-                  transitionDelay: `${index * 100}ms`,
-                  transformStyle: 'preserve-3d',
-                  perspective: '1000px'
+                  transitionDelay: `${index * 100}ms`
                 }}
               >
-                {/* Subtle gradient overlay on hover */}
-                <div className="absolute inset-0 rounded-[24px] bg-gradient-to-br from-wood-accent/0 via-wood-accent/0 to-wood-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                <CardHeader className="relative">
+                <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-accent/10 rounded-lg group-hover:bg-wood-accent/20 transition-colors duration-500">
-                      <Icon className="w-6 h-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6" style={{ color: 'hsl(var(--services-heading))' }} />
+                    <div className="p-2 bg-accent/10 rounded-lg">
+                      <Icon className="w-6 h-6" style={{ color: 'hsl(var(--services-heading))' }} />
                     </div>
                     <CardTitle className="text-xl" style={{ color: 'hsl(var(--services-heading))' }}>{service.title}</CardTitle>
                   </div>
-                  <div className="text-2xl font-semibold mt-2 group-hover:text-wood-accent transition-colors duration-500" style={{ color: 'hsl(var(--services-accent-text))' }}>{service.price}</div>
+                  <div className="text-2xl font-semibold mt-2" style={{ color: 'hsl(var(--services-accent-text))' }}>{service.price}</div>
                 </CardHeader>
               <CardContent>
                 <p className="mb-6 leading-relaxed" style={{ color: 'hsl(var(--services-main-text))' }}>

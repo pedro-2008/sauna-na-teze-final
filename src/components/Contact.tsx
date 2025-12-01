@@ -5,27 +5,20 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 export const Contact = () => {
   const { ref, isVisible } = useScrollAnimation();
   
-  return <section id="contact" ref={ref} className="py-24 px-6 bg-gradient-contact relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-radial from-wood-accent/5 to-transparent blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-gradient-radial from-cream/5 to-transparent blur-3xl pointer-events-none" />
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className={`text-center mb-16 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+  return <section id="contact" ref={ref} className="py-24 px-6 bg-gradient-contact">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6" style={{ color: 'hsl(var(--contact-heading))' }}>
             Kontakt a rezervace
           </h2>
-          <div className="w-24 h-1 mx-auto mb-6 bg-gradient-to-r from-transparent via-wood-accent to-transparent" />
           <p className="text-lg" style={{ color: 'hsl(var(--contact-main-text))' }}>
             Těšíme se na vaši návštěvu
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">
-            <Card 
-            className={`group shadow-soft hover:shadow-warm transition-all duration-1000 hover:scale-105 hover:-translate-y-2 rounded-[24px] ${
+          <Card 
+            className={`shadow-soft hover:shadow-warm transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ 
@@ -71,7 +64,7 @@ export const Contact = () => {
           </Card>
 
           <Card 
-            className={`group shadow-soft hover:shadow-warm transition-all duration-1000 hover:scale-105 hover:-translate-y-2 rounded-[24px] ${
+            className={`shadow-soft hover:shadow-warm transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{ 
@@ -117,7 +110,7 @@ export const Contact = () => {
           style={{ transitionDelay: '400ms' }}
         >
           <Card 
-            className="group shadow-soft hover:shadow-warm transition-all duration-700 hover:scale-[1.02] rounded-[24px] overflow-hidden"
+            className="shadow-soft hover:shadow-warm transition-shadow duration-300 overflow-hidden"
             style={{ 
               backgroundColor: 'hsl(var(--contact-card-bg))',
               borderColor: 'hsl(var(--contact-card-border))',
