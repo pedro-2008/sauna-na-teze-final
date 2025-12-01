@@ -41,7 +41,9 @@ Updated: Nová teplá dřevěná barevná paleta
     --wood-warm: 27 47% 37%;
     --wood-light: 39 52% 77%;
     --wood-dark: 28 58% 19%;
+    --wood-accent: 39 62% 60%; /* Zlatavá */
     --cream: 30 33% 96%;
+    --cream-light: 30 33% 98%;
     --eco-green: 105 9% 50%;
     
     /* Hero Text Colors */
