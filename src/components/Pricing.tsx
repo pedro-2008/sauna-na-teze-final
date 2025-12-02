@@ -1,6 +1,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { User, Baby, Clock, Ticket, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { User, Baby, Clock, Ticket, Heart, Gift, ArrowRight } from "lucide-react";
 
 export const Pricing = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -79,6 +80,56 @@ export const Pricing = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Dárkové poukazy */}
+          <Card className="mt-8 bg-white/80 backdrop-blur-sm shadow-soft hover:shadow-warm transition-all duration-300 rounded-[20px] overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1" style={{ backgroundColor: 'hsl(var(--pricing-accent-text))' }} />
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="p-4 rounded-2xl" style={{ backgroundColor: 'hsl(var(--pricing-accent-text) / 0.1)' }}>
+                  <Gift className="w-10 h-10" style={{ color: 'hsl(var(--pricing-accent-text))' }} />
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-2xl font-semibold mb-2" style={{ color: 'hsl(var(--pricing-heading))' }}>
+                    Dárkové poukazy
+                  </h3>
+                  <p className="mb-4" style={{ color: 'hsl(var(--pricing-main-text))' }}>
+                    Darujte svým blízkým zážitek plný relaxace a pohody. Poukazy jsou dostupné na všechny naše služby.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-4 py-1.5 rounded-full text-sm border" style={{ 
+                      borderColor: 'hsl(var(--pricing-accent-text) / 0.3)',
+                      color: 'hsl(var(--pricing-main-text))'
+                    }}>
+                      Na saunu
+                    </span>
+                    <span className="px-4 py-1.5 rounded-full text-sm border" style={{ 
+                      borderColor: 'hsl(var(--pricing-accent-text) / 0.3)',
+                      color: 'hsl(var(--pricing-main-text))'
+                    }}>
+                      Na masáže
+                    </span>
+                    <span className="px-4 py-1.5 rounded-full text-sm border" style={{ 
+                      borderColor: 'hsl(var(--pricing-accent-text) / 0.3)',
+                      color: 'hsl(var(--pricing-main-text))'
+                    }}>
+                      Kombinované
+                    </span>
+                  </div>
+                </div>
+                
+                <Button 
+                  className="flex items-center gap-2 px-6 py-3 rounded-lg text-white font-medium"
+                  style={{ backgroundColor: 'hsl(var(--pricing-accent-text))' }}
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Objednat poukaz
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
