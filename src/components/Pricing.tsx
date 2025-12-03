@@ -95,7 +95,7 @@ export const Pricing = () => {
                     Dárkové poukazy
                   </h3>
                   <p className="mb-4" style={{ color: 'hsl(var(--pricing-main-text))' }}>
-                    Darujte svým blízkým zážitek plný relaxace a pohody. Poukazy jsou dostupné na všechny naše služby.
+                    Darujte svým blízkým zážitek plný relaxace a pohody. Dárkové poukazy nabízíme v libovolné hodnotě.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-4 py-1.5 rounded-full text-sm border" style={{ 
